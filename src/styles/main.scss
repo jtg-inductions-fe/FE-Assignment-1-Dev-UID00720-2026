@@ -1,4 +1,125 @@
 // TODO: Add styles as per the requirement
-body{
-    background-color: blue;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    li{
+        list-style-type: none;
+    }
+    
 }
+
+//css for tablet + mobile
+@media screen and (max-width: 1023px) {
+  .nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #e7e3e3;
+      opacity: .80;
+      z-index: 1000;
+      ul{
+        margin: auto;
+        width: 100%;
+        li{
+            text-align: center;
+            border: 1px solid #a19b9b;
+            border-radius: 50px;
+            cursor: pointer;
+            a{
+                width: 100%;
+            }
+        }
+    }
+    }
+    
+}
+
+#login-sign-btns{
+    display:none;
+}
+//for mobile only
+@media screen and (max-width:430px){
+    header{
+        padding: 30px 15px;
+    }
+}
+
+//for tablet only
+@media (min-width: 431px) and (max-width: 1023px) {
+    #login-sign-btns{
+        display:block;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding: 32px;
+    }
+    #header-section{
+        width: 50%;
+        flex-direction: row-reverse;
+    }
+}
+//css for laptop only
+@media screen and (min-width:1024px){
+    #login-sign-btns{
+        display:block;
+    }
+    .nav-menu{
+        ul{
+            display: flex;
+            justify-content: space-between;
+        }
+        width: 428px;
+    }
+    #hamburger{
+        display: none;
+    }
+    header{
+    display: flex;
+    justify-content: space-between;
+    }
+}
+
+#header-section{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#login-sign-btns{
+    width: 220px;
+}
+
+.show{
+    display: flex;
+}
+
+.pri-btn{
+    cursor: pointer;
+    background-color: #5D50C6;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 100px;
+    color: white;
+    
+}
+
+.sec-btn{
+    cursor: pointer;
+    background-color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 100px;
+}
+#hamburger{
+    cursor: pointer;
+}
+
+
