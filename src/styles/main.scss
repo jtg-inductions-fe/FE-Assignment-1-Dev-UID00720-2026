@@ -10,6 +10,9 @@
     li{
         list-style-type: none;
     }
+    button{
+        border: none;
+    }
     
 }
 
@@ -21,13 +24,13 @@
       top: 100%;
       left: 0;
       width: 100%;
-      background: #e7e3e3;
       opacity: .80;
       z-index: 1000;
       ul{
-        margin: auto;
-        width: 100%;
-        li{
+          margin: auto;
+          width: 100%;
+          li{
+            background: #e7e3e3;
             text-align: center;
             border: 1px solid #a19b9b;
             border-radius: 50px;
@@ -119,7 +122,9 @@
     border-radius: 100px;
 }
 #hamburger{
-    cursor: pointer;
+    button{
+        cursor: pointer;
+    }
 }
 
 
