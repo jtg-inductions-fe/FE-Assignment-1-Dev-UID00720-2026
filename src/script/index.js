@@ -12,4 +12,11 @@ document.addEventListener('click', (event) => {
         !hamburger.contains(event.target)) {
       navMenu.classList.remove('show');
     }
-  });
+});
+
+document.addEventListener('keydown', (event) => {
+    // Close on Escape
+    if (event.key === 'Escape' && navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
+    }
+});
