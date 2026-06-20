@@ -15,6 +15,9 @@
     }
     
 }
+body {
+  font-family: 'Circular Std', sans-serif;
+}
 
 //css for tablet + mobile
 @media screen and (max-width: 1023px) {
@@ -65,7 +68,7 @@
         padding: 32px;
     }
     #header-section{
-        width: 50%;
+        width: 45%;
         flex-direction: row-reverse;
     }
 }
@@ -74,19 +77,34 @@
     #login-sign-btns{
         display:block;
     }
-    .nav-menu{
-        ul{
-            display: flex;
-            justify-content: space-between;
-        }
-        width: 428px;
-    }
     #hamburger{
         display: none;
     }
     header{
-    display: flex;
-    justify-content: space-between;
+        width: 82%;
+        padding: 115px 0px;
+        height: 112px;
+        align-items: center;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        div{
+            width: 61%;
+            .nav-menu{
+                margin: 10px;
+                display: flex;
+                align-items: center;
+                width: 820px;
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    li{
+                        font-size: large;
+                    }
+                }
+            }
+        }   
     }
 }
 
@@ -94,10 +112,15 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    div{
+        img{
+            width: 50px;
+        }
+    }
 }
 
 #login-sign-btns{
-    width: 220px;
+    width: auto;
 }
 
 .show{
@@ -107,9 +130,11 @@
 .pri-btn{
     cursor: pointer;
     background-color: #5D50C6;
-    padding: 16px 32px;
+    padding: 22px 40px;
     border: none;
     border-radius: 100px;
+    font-size: medium;
+    font-weight: 600;
     color: white;
     
 }
@@ -117,8 +142,10 @@
 .sec-btn{
     cursor: pointer;
     background-color: white;
-    padding: 16px 32px;
+    padding: 22px 40px;
     border: none;
+    font-size: medium;
+    font-weight: 600;
     border-radius: 100px;
 }
 #hamburger{
