@@ -14,11 +14,7 @@
             cursor: pointer;
         }
     }
-    div{
-        img{
-            width: 50px;
-        }
-    }
+    
 }
 .mob-nav-only{
     display: none;
@@ -54,7 +50,10 @@
 //for mobile only
 @media screen and (max-width:430px){
     header{
-        padding: 40px 15px;
+        padding: 32px 15px;
+        img{
+            height: 40px;
+        }
         .mob-nav-only{
             display:block;
         }
@@ -73,6 +72,11 @@
         #header-section{
             width: 45%;
             flex-direction: row-reverse;
+            div{
+                img{
+                    width: 50px;
+                }
+            }
         }
         #login-sign-btns{
             min-width: 280px;
@@ -97,6 +101,13 @@
         margin: auto;
         display: flex;
         justify-content: space-between;
+        #header-section{
+            div{
+                img{
+                    width: 50px;
+                }
+            }
+        }
         div{
             width: 61%;
             .nav-menu{
