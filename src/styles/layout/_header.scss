@@ -1,13 +1,32 @@
+.hide-menu-btn{
+    position: fixed;
+    right: 2%;
+    top: 9.5%;
+    p{
+        background-color: red;
+        width: 80px;
+        height: 40px;
+        display: flex;
+        font-weight: 900;
+        font-size: larger;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
 
+    }
+}
 #login-sign-btns{
     display:none;
     width: auto;
+}
+header{
+    position: relative;
 }
 #header-section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    
     #hamburger{
         margin: 5px;
         button{
@@ -27,16 +46,19 @@
 @media screen and (max-width: 1023px) {
     .nav-menu {
       display: none;
-      position: absolute;
-      top: 100%;
+      position: fixed;
+      top: 0;
       left: 0;
+      background-color: #a19b9b;
       width: 100%;
+      height: 100vh;
       opacity: .80;
       z-index: 1000;
       ul{
           margin: auto;
           width: 100%;
           li{
+              margin: 5px;
               background: #e7e3e3;
               text-align: center;
               border: 1px solid #a19b9b;
@@ -44,6 +66,13 @@
               cursor: pointer;
               a{
                   width: 100%;
+                  p{
+                    height: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: larger;
+                  }
                 }
             }
     }
@@ -105,6 +134,9 @@
                 align-items: center;
                 width: 820px;
                 ul{
+                    .hide-menu-btn{
+                        display: none;
+                    }
                     display: flex;
                     justify-content: space-between;
                     width: 100%;
