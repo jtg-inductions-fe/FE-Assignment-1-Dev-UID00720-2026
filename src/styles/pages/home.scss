@@ -1,2 +1,18 @@
+@media screen and (max-width:430px){
+    .container{
+        padding: 0px $mobile-padding;
+    }
+}
+@media (min-width: 431px) and (max-width: 1023px){
+    .container{
+        padding: 0px $tablet-padding;
+    }
+}
+@media screen and (min-width:1024px){
+    .container{
+        padding: 0px $desktop-padding;
+    }
+}
+
 @import "../layout/header";
 @import "../layout/hero";

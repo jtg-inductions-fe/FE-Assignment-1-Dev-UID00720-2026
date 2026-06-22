@@ -9,7 +9,6 @@
     align-items: center;
     position: relative;
     #hamburger{
-        margin: 5px;
         button{
             cursor: pointer;
         }
@@ -49,8 +48,9 @@
 
 //for mobile only
 @media screen and (max-width:430px){
+    
     header{
-        padding: 32px 15px;
+        padding: 40px 0px;
         img{
             height: 40px;
         }
@@ -62,15 +62,15 @@
 
 //for tablet only
 @media (min-width: 431px) and (max-width: 1023px) {
-    #login-sign-btns{
-        display:block;
-    }
     header{
         display: flex;
         justify-content: space-between;
-        padding: 40px;
+        padding: 40px 0px;
         #header-section{
-            width: 45%;
+            #hamburger{
+                width: 5px;
+            }
+            width: 50%;
             flex-direction: row-reverse;
             div{
                 img{
@@ -79,6 +79,7 @@
             }
         }
         #login-sign-btns{
+            display: block;
             min-width: 280px;
         }
     }
@@ -94,11 +95,9 @@
         display: none;
     }
     header{
-        width: 82%;
         padding: 115px 0px;
         height: 112px;
         align-items: center;
-        margin: auto;
         display: flex;
         justify-content: space-between;
         #header-section{
