@@ -7,33 +7,45 @@ function getIsMobile() {
     return isMobileQuery.matches;
 }
 
+function setMenuOpen(isOpen) {
+    navMenu.classList.toggle('show', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
 hamburger.addEventListener('click',()=>{
-    navMenu.classList.toggle('show');
+    setMenuOpen(!navMenu.classList.contains('show'));
 });
 
-hideMenuBtn.addEventListener('click',()=>{
-        navMenu.classList.remove('show');
-        return;
+hideMenuBtn.addEventListener('click',(event)=>{
+    event.preventDefault();
+    setMenuOpen(false);
 });
 
 document.addEventListener('keydown', (event) => {
     // Close on Escape
     if (event.key === 'Escape' && navMenu.classList.contains('show')) {
-        navMenu.classList.remove('show');
+        setMenuOpen(false);
         return;
     }
     if(event.key==='Tab' && navMenu.classList.contains('show')){
         const current=document.activeElement;
+        const first = hideMenuBtn;
         const isMobile = getIsMobile();
-        if(isMobile){
-            if (current.classList.contains('last-hamburger-nav-for-mobile')) {
-                event.preventDefault();
-                hideMenuBtn.focus();
-            }
-        }
-        else if (current.classList.contains('last-hamburger-nav-for-tablet')) {
+        const lastSelector = isMobile ? '.last-hamburger-nav-for-mobile' : '.last-hamburger-nav-for-tablet';
+        const last = navMenu.querySelector(lastSelector);
+
+        if (event.shiftKey && current === first) {
             event.preventDefault();
-            hideMenuBtn.focus();
+            last?.focus();
+            return;
+        }
+        
+        if (current === last) {
+            if(event.key === "Tab" && event.shiftKey){
+                return;
+            }
+            event.preventDefault();
+            first.focus();
         }
     }
 });
