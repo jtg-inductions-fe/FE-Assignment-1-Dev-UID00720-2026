@@ -26,7 +26,7 @@ header{
         }
     }
 }
-#header-section{
+.header-section{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +48,7 @@ header{
 }
 
 //css for tablet + mobile
-@media screen and (max-width: 1023px) {
+@include tablet-and-mobile {
     .nav-menu {
       display: none;
       position: fixed;
@@ -81,7 +81,7 @@ header{
 }
 
 //for mobile only
-@media screen and (max-width:430px){
+@include mobile-only{
     header{
         padding: 40px 15px;
         .mob-nav-only{
@@ -91,7 +91,7 @@ header{
 }
 
 //for tablet only
-@media (min-width: 431px) and (max-width: 1023px) {
+@include tablet-only {
     #login-sign-btns{
         display:block;
     }
@@ -99,7 +99,7 @@ header{
         display: flex;
         justify-content: space-between;
         padding: 40px;
-        #header-section{
+        .header-section{
             width: 45%;
             flex-direction: row-reverse;
         }
@@ -110,7 +110,7 @@ header{
 }
 
 //css for laptop only
-@media screen and (min-width:1024px){
+@include laptop-only{
     #login-sign-btns{
         display:block;
     }
