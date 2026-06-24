@@ -1,11 +1,8 @@
 @import "abstracts/variables";
 @import "base/reset";
 @import "base/typography";
+@import "abstracts/mixins";
 
-@import "pages/home.scss";
+@import "pages/home";
 
-@import "components/buttons.scss"
-
-
-
-
+@import "components/buttons";

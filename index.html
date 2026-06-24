@@ -11,28 +11,29 @@
     <body>
         <div class="container">
             <header>
-                <div id="header-section">
-                    <div><img src="/assets/appLogo.png" alt="Travlog-logo"></div>
+                <div class="header-section">
+                    <div class="header-section__icon"><img src="/assets/appLogo.svg" alt="Travlog-logo"></div>
 
-                    <div id="hamburger">
-                        <button><img src="/assets/hamburger.png" alt="hamburger-icon"></button>
-                    </div>
-
-                    <nav class="nav-menu">
-                        <ul>
-                            <li><a href="#home"><p>Home</p></a></li>
-                            <li><a href="#discover"><p>Discover</p></a></li>
-                            <li><a href="#special-deals"><p>Special Deals</p></a></li>
-                            <li><a href="#contact"><p>Contact</p></a></li>
-                            <li class="mob-nav-only"><a href="#Log-In"><p>Log In</p></a></li>
-                            <li class="mob-nav-only"><a href="#Sign-Up"><p>Sign up</p></a></li>
-                        </ul>
-                    </nav>
+                <div class="header-section__icon" id="hamburger">
+                    <button type="button"><img src="/assets/hamburger.svg" alt="hamburger-icon"></button>
                 </div>
 
+                <nav class="header-section__nav-menu">
+                    <ul>
+                        <li><button class="hide-menu-btn" type="button">X</button></li>
+                        <li class="nav-links"><a href="#home">Home</a></li>
+                        <li class="nav-links"><a href="#discover">Discover</a></li>
+                        <li class="nav-links"><a href="#special-deals">Special Deals</a></li>
+                        <li class="nav-links"><a class="last-hamburger-nav-for-tablet" href="#contact">Contact</a></li>
+                        <li class="mob-nav-only"><a href="#Log-In">Log In</a></li>
+                        <li class="mob-nav-only"><a class="last-hamburger-nav-for-mobile" href="#Sign-Up">Sign up</a></li>
+                    </ul>
+                </nav>
+            </div>
+
                 <div id="login-sign-btns">
-                    <button class="sec-btn">Log In</button>
-                    <button class="pri-btn">Sign Up</button>
+                    <button type="button" class="sec-btn">Log In</button>
+                    <button type="button" class="pri-btn">Sign Up</button>
                 </div>
             </header>
             <div class="blur-orange-bg"></div>
