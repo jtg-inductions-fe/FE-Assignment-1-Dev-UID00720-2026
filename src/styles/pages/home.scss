@@ -1,16 +1,54 @@
+.container{
+    position: relative;
+    .blur-orange-bg{
+        position: absolute;
+        z-index: 1000;
+        opacity: 0.5;
+        background-color: rgba(255, 87, 34, 1);
+    }
+}
+
+// mobile
 @media screen and (max-width:430px){
     .container{
         padding: 0px $mobile-padding;
+        .blur-orange-bg{
+            width: 272px;
+            height: 348px;
+            top: -36px;
+            left: -105px;
+            filter: blur(150px);
+            
+        }
     }
 }
+
+// tablet
 @media (min-width: 431px) and (max-width: 1023px){
     .container{
         padding: 0px $tablet-padding;
+        .blur-orange-bg{
+            width: 500px;
+            height: 500px;
+            top: -160px;
+            left: -160px;
+            filter: blur(250px);
+        }
     }
 }
+
+// desktop
 @media screen and (min-width:1024px){
     .container{
         padding: 0px $desktop-padding;
+        .blur-orange-bg{
+            width: 600px;
+            height: 494.9px;
+            top: 60px;
+            left: -50px;
+            filter: blur(250px);
+            
+        }
     }
 }
 
