@@ -83,7 +83,14 @@ header{
 //for mobile only
 @include mobile-only{
     header{
-        padding: 40px 15px;
+        .header-section{
+            div{
+                img{
+                    width: 40px;
+                }
+            }
+        }
+        padding: 35px 15px;
         .mob-nav-only{
             display:block;
         }
