@@ -16,7 +16,6 @@
 #login-sign-btns{
     display:none;
     width: auto;
-    min-width: 278px;
 }
 header{
     position: relative;
@@ -37,7 +36,7 @@ header{
             cursor: pointer;
         }
     }
-    div{
+    .header-section__icon{
         img{
             width: 50px;
         }
@@ -49,7 +48,7 @@ header{
 
 //css for tablet + mobile
 @include tablet-and-mobile {
-    .nav-menu {
+    .header-section__nav-menu {
       display: none;
       position: fixed;
       top: 0;
@@ -84,7 +83,7 @@ header{
 @include mobile-only{
     header{
         .header-section{
-            div{
+            .header-section__icon{
                 img{
                     width: 40px;
                 }
@@ -105,13 +104,23 @@ header{
     header{
         display: flex;
         justify-content: space-between;
-        padding: 40px;
+        padding: 32px 55px;
         .header-section{
-            width: 45%;
+            width: 53%;
             flex-direction: row-reverse;
+            .header-section__icon{
+                img{
+                    width: 40px;
+                }
+            }
         }
         #login-sign-btns{
-            min-width: 280px;
+            width: auto;
+            min-width: 225px;
+            button{
+                font-size: 14px;
+                padding: 17px 30px;
+            }
         }
     }
 }
@@ -120,6 +129,7 @@ header{
 @include laptop-only{
     #login-sign-btns{
         display:block;
+        min-width: 278px;
     }
     #hamburger{
         display: none;
@@ -132,14 +142,14 @@ header{
         margin: auto;
         display: flex;
         justify-content: space-between;
-        div{
-            width: 58%;
-            .nav-menu{
+        .header-section{
+            width: 61%;
+            .header-section__nav-menu{
                 margin: 2px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                width: 900px;
+                width: 640px;
                 ul{
                     .hide-menu-btn{
                         display: none;

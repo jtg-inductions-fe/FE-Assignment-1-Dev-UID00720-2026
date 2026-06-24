@@ -1,5 +1,5 @@
 const hamburger = document.querySelector('#hamburger');
-const navMenu = document.querySelector('.nav-menu');
+const navMenu = document.querySelector('.header-section__nav-menu');
 const hideMenuBtn = document.querySelector('.hide-menu-btn');
 const isMobileQuery = window.matchMedia("(max-width: 430px)");
 
