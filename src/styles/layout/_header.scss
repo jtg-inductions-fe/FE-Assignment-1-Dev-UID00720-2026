@@ -1,4 +1,4 @@
-.hide-menu-btn{
+.nav-menu__hide-menu-btn{
     position: fixed;
     right: 2%;
     top: 2%;
@@ -13,13 +13,13 @@
     border-radius: 10px;
     cursor: pointer;
 }
-#login-sign-btns{
+.login-sign-btns{
     display:none;
     width: auto;
 }
 header{
     position: relative;
-    .nav-links{
+    .nav-menu__nav-links{
         a{
             color: rgba(25, 24, 37, 0.5);
         }
@@ -42,13 +42,13 @@ header{
         }
     }
 }
-.mob-nav-only{
+.nav-menu__mob-nav-only{
     display: none;
 }
 
 //css for tablet + mobile
 @include tablet-and-mobile {
-    .header-section__nav-menu {
+    .nav-menu {
       display: none;
       position: fixed;
       top: 0;
@@ -90,7 +90,7 @@ header{
             }
         }
         padding: 35px 15px;
-        .mob-nav-only{
+        .nav-menu__mob-nav-only{
             display:block;
         }
     }
@@ -98,7 +98,7 @@ header{
 
 //for tablet only
 @include tablet-only {
-    #login-sign-btns{
+    .login-sign-btns{
         display:block;
     }
     header{
@@ -114,7 +114,7 @@ header{
                 }
             }
         }
-        #login-sign-btns{
+        .login-sign-btns{
             width: auto;
             min-width: 225px;
             button{
@@ -127,7 +127,7 @@ header{
 
 //css for laptop only
 @include laptop-only{
-    #login-sign-btns{
+    .login-sign-btns{
         display:block;
         min-width: 278px;
     }
@@ -144,14 +144,14 @@ header{
         justify-content: space-between;
         .header-section{
             width: 61%;
-            .header-section__nav-menu{
+            .nav-menu{
                 margin: 2px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 width: 640px;
                 ul{
-                    .hide-menu-btn{
+                    .nav-menu__hide-menu-btn{
                         display: none;
                     }
                     display: flex;
