@@ -142,6 +142,30 @@
             }
         }
     }
+    .websites-logo{
+        padding-top: 20px;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        column-gap: 20px;
+        .tripadvisor{
+            width: 130px;
+        }
+        .expedia{
+            width: 70px;
+        }
+        .booking{
+            width: 120px;
+        }
+        .airbnb{
+            width: 65px;
+        }
+        .orbitz{
+            width: 110px;
+        }
+    }
 }
 
 //tablet
@@ -227,6 +251,31 @@
             position: absolute;
             left: -25px;
             top: 1125px;
+        }
+    }
+    .websites-logo{
+        padding-top: 80px;
+        display: flex;
+        width: 70%;
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        column-gap: 25px;
+        .tripadvisor{
+            width: 32%;
+        }
+        .expedia{
+            width: 18%;
+        }
+        .booking{
+            width: 30%;
+        }
+        .airbnb{
+            width: 17%;
+        }
+        .orbitz{
+            width: 28%;
         }
     }
 }
@@ -334,6 +383,28 @@
             img{
                 width: 82px;
             }
+        }
+    }
+    .websites-logo{
+        margin-top: 175px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        .tripadvisor{
+            width: 18%;
+        }
+        .expedia{
+            width: 10%;
+        }
+        .booking{
+            width: 16%;
+        }
+        .airbnb{
+            width: 9%;
+        }
+        .orbitz{
+            width: 14%;
         }
     }
 }
