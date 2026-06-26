@@ -1,6 +1,6 @@
 const hamburger = document.querySelector('#hamburger');
 const navMenu = document.querySelector('.nav-menu');
-const hideMenuBtn = document.querySelector('.nav-menu__hide-menu-btn');
+const hideMenuBtn = document.querySelector('.nav-menu__menu-btn--hide');
 const isMobileQuery = window.matchMedia("(max-width: 430px)");
 
 /**
