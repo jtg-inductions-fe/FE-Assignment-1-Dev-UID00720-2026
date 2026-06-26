@@ -61,6 +61,9 @@
 .star-logo{
     display: none;
 }
+.blur-yellow-bg{
+    display: none;
+}
 
 @include for-device-width('md'){
     .travel-section{
@@ -185,5 +188,15 @@
         img{
             width: 320px;
         }
+    }
+    .blur-yellow-bg{
+        display: block;
+        position: absolute;
+        top: -15%;
+        right: -35%;
+        width: 500px;
+        height: 500px;
+        background-color: rgba(250, 205, 73, 1);
+        filter: blur(450px);
     }
 }

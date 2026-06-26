@@ -83,6 +83,9 @@ header{
     .login-sign-btns{
         display:block;
     }
+    #hamburger{
+        z-index: 1001;
+    }
     header{
         display: flex;
         justify-content: space-between;
