@@ -1,21 +1,21 @@
-.hero-section{
+.hero-section {
     margin: 15px 0px;
-    &__img-section{
+    &__img-section {
         margin-top: 30px;
         position: relative;
-        &__location-icon{
-            position:absolute;
+        &__location-icon {
+            position: absolute;
             width: 62px;
             top: 170px;
             left: 15px;
         }
-        &__connect-icon{
+        &__connect-icon {
             position: absolute;
             width: 62px;
             top: 317px;
             left: 220px;
         }
-        &__top-places-icon{
+        &__top-places-icon {
             position: absolute;
             width: 110px;
             top: 240px;
@@ -25,24 +25,24 @@
         background-image: url('/assets/layer.png');
         background-repeat: no-repeat;
         background-size: contain;
-        &__imgs{
+        &__imgs {
             width: 100%;
-            &__container1{
+            &__container1 {
                 width: 35%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                img{
+                img {
                     width: 100%;
                 }
             }
-            &__container2{
+            &__container2 {
                 width: 35%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                img{
+                img {
                     width: 100%;
                 }
             }
@@ -51,19 +51,18 @@
             gap: 15px;
             padding-top: 40px;
 
-            &__container1{
+            &__container1 {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
             }
         }
-        
     }
 
-    &__content-section{
+    &__content-section {
         text-align: center;
         padding: 35px 0px;
-        &__heading1{
+        &__heading1 {
             color: $secondary-color;
             font-size: small;
             display: flex;
@@ -75,23 +74,22 @@
             margin: auto;
             border-radius: 100px;
             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-            
         }
-        &__heading2{
+        &__heading2 {
             font-size: 40px;
             padding: 18px 0px;
             font-weight: 700;
-            span{
+            span {
                 color: $secondary-color;
             }
         }
-        &__para{
+        &__para {
             padding: 8px 4px;
             color: gray;
             line-height: 25px;
         }
-        &__btns{
-            .primary-btn{
+        &__btns {
+            .primary-btn {
                 box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.15);
                 margin: 20px 0px;
                 height: 65px;
@@ -100,12 +98,12 @@
                 font-weight: 700;
                 font-style: bold;
             }
-            .secondary-btn{
+            .secondary-btn {
                 display: flex;
                 justify-content: center;
                 gap: 8px;
                 align-items: center;
-                border: 1px solid #EEEEEE;
+                border: 1px solid #eeeeee;
                 margin-top: 5px;
                 height: 65px;
                 width: 100%;
@@ -116,103 +114,102 @@
         }
     }
 }
-.triangles-image{
+.triangles-image {
     display: none;
 }
 
 //mobile
-    .websites-logo{
-        padding-top: 20px;
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-        column-gap: 20px;
-        .tripadvisor{
-            width: 130px;
-        }
-        .expedia{
-            width: 70px;
-        }
-        .booking{
-            width: 120px;
-        }
-        .airbnb{
-            width: 65px;
-        }
-        .orbitz{
-            width: 110px;
-        }
+.websites-logo {
+    padding-top: 20px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    column-gap: 20px;
+    .tripadvisor {
+        width: 130px;
     }
-
+    .expedia {
+        width: 70px;
+    }
+    .booking {
+        width: 120px;
+    }
+    .airbnb {
+        width: 65px;
+    }
+    .orbitz {
+        width: 110px;
+    }
+}
 
 //tablet
-@include for-device-width('md'){
-    .hero-section{
+@include for-device-width('md') {
+    .hero-section {
         position: relative;
         padding-top: 50px;
-        &__img-section{
+        &__img-section {
             margin: auto;
             width: 85%;
-            &__location-icon{
-                position:absolute;
+            &__location-icon {
+                position: absolute;
                 top: 48%;
                 left: 3%;
                 width: 17%;
             }
-            &__connect-icon{
+            &__connect-icon {
                 position: absolute;
                 width: 17%;
                 top: 92%;
                 left: 57%;
             }
-            &__top-places-icon{
+            &__top-places-icon {
                 position: absolute;
-                width:30%;
+                width: 30%;
                 top: 69%;
                 left: 73%;
             }
-            &__imgs{
+            &__imgs {
                 width: 100%;
                 display: flex;
                 padding-top: 0px;
                 gap: 4%;
-                &__container1{
+                &__container1 {
                     margin-top: 10%;
                     width: 35%;
                     gap: 30px;
-                    div{
+                    div {
                         width: 100%;
                     }
                 }
-                &__container2{
+                &__container2 {
                     margin-top: 10%;
                     width: 35%;
-                    div{
+                    div {
                         width: 100%;
                     }
                 }
             }
         }
-        &__content-section{
+        &__content-section {
             padding-top: 60px;
             max-width: 570px;
             margin: auto;
             text-align: center;
-            &__heading2{
+            &__heading2 {
                 margin-top: 25px;
                 font-size: 55px;
                 line-height: 130%;
             }
-            &__para{
-                max-width:450px;
+            &__para {
+                max-width: 450px;
                 padding-top: 25px;
                 line-height: 150%;
                 font-size: 19px;
-                margin:auto;
+                margin: auto;
             }
-            &__btns{
+            &__btns {
                 padding: 0px;
                 width: 400px;
                 margin: auto;
@@ -221,29 +218,29 @@
                 align-items: center;
                 margin-top: 5px;
                 gap: 10px;
-                button{
+                button {
                     font-size: 14px;
                 }
-                .primary-btn{
-                    padding: 0px ;
+                .primary-btn {
+                    padding: 0px;
                     height: 50px;
                     width: 150px;
                 }
-                .secondary-btn{
-                    padding: 0px ;
+                .secondary-btn {
+                    padding: 0px;
                     height: 50px;
                     width: 170px;
                 }
             }
         }
-        .triangles-image{
+        .triangles-image {
             display: block;
             position: absolute;
             left: -15px;
             top: 1135px;
         }
     }
-    .websites-logo{
+    .websites-logo {
         padding-top: 60px;
         display: flex;
         width: 70%;
@@ -252,19 +249,19 @@
         justify-content: center;
         gap: 30px;
         column-gap: 25px;
-        .tripadvisor{
+        .tripadvisor {
             width: 32%;
         }
-        .expedia{
+        .expedia {
             width: 18%;
         }
-        .booking{
+        .booking {
             width: 30%;
         }
-        .airbnb{
+        .airbnb {
             width: 17%;
         }
-        .orbitz{
+        .orbitz {
             width: 28%;
         }
     }
@@ -272,85 +269,85 @@
 
 //laptop
 @include for-device-width('lg') {
-    .hero-section{
+    .hero-section {
         display: flex;
         flex-direction: row-reverse;
         padding-top: 1%;
         min-width: 865px;
-        &__img-section{
+        &__img-section {
             margin: auto;
             margin-top: 0px;
             margin-left: 45px;
             width: 65%;
             min-width: 500px;
-            &__location-icon{
-                position:absolute;
+            &__location-icon {
+                position: absolute;
                 top: 49%;
                 left: 3%;
                 width: 17%;
             }
-            &__connect-icon{
+            &__connect-icon {
                 position: absolute;
                 width: 17%;
                 top: 93%;
                 left: 58%;
             }
-            &__top-places-icon{
+            &__top-places-icon {
                 position: absolute;
-                width:30%;
+                width: 30%;
                 top: 70%;
                 left: 73%;
             }
-            &__imgs{
+            &__imgs {
                 width: 100%;
                 display: flex;
                 padding-top: 0px;
                 gap: 4%;
-                &__container1{
+                &__container1 {
                     margin-top: 10%;
                     width: 35%;
                     gap: 40px;
-                    div{
+                    div {
                         width: 100%;
                     }
                 }
-                &__container2{
+                &__container2 {
                     margin-top: 10%;
                     width: 35%;
-                    div{
+                    div {
                         width: 100%;
                     }
                 }
             }
         }
-        &__content-section{
+        &__content-section {
             padding-top: 2%;
-            &__heading1{
+            &__heading1 {
                 margin: 0px;
                 margin-left: 10px;
                 width: 270px;
                 font-size: 18px;
-                img{
+                img {
                     width: 30px;
                 }
             }
-            &__heading2{
+            &__heading2 {
                 margin-top: 10%;
                 text-align: left;
                 width: 500px;
                 font: bold;
                 line-height: 120%;
-                font-size: 5.5rem
+                font-size: 5.5rem;
             }
-            &__para{
-                margin-top: 3%;;
+            &__para {
+                margin-top: 3%;
                 font-size: 24px;
                 font-weight: 400;
                 line-height: 160%;
                 text-align: left;
                 width: 450px;
             }
-            &__btns{
+            &__btns {
                 width: 450px;
                 display: flex;
                 justify-content: left;
@@ -358,53 +355,52 @@
                 display: flex;
                 gap: 20px;
                 align-items: center;
-                button{
-                    img{
+                button {
+                    img {
                         width: 25px;
                     }
                 }
-                .primary-btn{
+                .primary-btn {
                     width: 170px;
                     height: 60px;
                     font-size: 17px;
                 }
-                .secondary-btn{
+                .secondary-btn {
                     width: 220px;
                     font-size: 17px;
                     height: 70px;
-
                 }
             }
         }
-        .triangles-image{
+        .triangles-image {
             display: block;
             position: absolute;
             left: -100px;
             top: 880px;
-            img{
+            img {
                 width: 82px;
             }
         }
     }
-    .websites-logo{
+    .websites-logo {
         margin-top: 90px;
         display: flex;
         width: 100%;
         justify-content: space-between;
         gap: 10px;
-        .tripadvisor{
+        .tripadvisor {
             width: 18%;
         }
-        .expedia{
+        .expedia {
             width: 10%;
         }
-        .booking{
+        .booking {
             width: 16%;
         }
-        .airbnb{
+        .airbnb {
             width: 9%;
         }
-        .orbitz{
+        .orbitz {
             width: 14%;
         }
     }
