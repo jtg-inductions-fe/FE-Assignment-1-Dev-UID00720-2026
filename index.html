@@ -9,10 +9,6 @@
             href="https://cdn.jsdelivr.net/npm/@vetixy/circular-std@1.0.0/dist/index.min.css"
             rel="stylesheet"
         />
-        <link
-            rel="stylesheet"
-            href="node_modules/@splidejs/splide/dist/css/splide-core.min.css"
-        />
     </head>
     <body>
         <div class="container">
@@ -82,22 +78,22 @@
                     <article class="hero-section__img-section">
                         <img
                             class="hero-section__img-section__location-icon"
-                            src="/assets/Frame 16.svg"
+                            src="/assets/location-icon.svg"
                             alt="location icon"
                         />
                         <img
                             class="hero-section__img-section__connect-icon"
-                            src="/assets/Frame 17.svg"
+                            src="/assets/connect-icon.svg"
                             alt="connect icon"
                         />
                         <img
                             class="hero-section__img-section__top-places-icon"
-                            src="/assets/Frame 18.svg"
+                            src="/assets/top-place-icon.svg"
                             alt="top places icon"
                         />
                         <div class="hero-section__img-section__imgs">
                             <div
-                                class="hero-section__img-section__imgs__container1"
+                                class="hero-section__img-section__imgs__left-img"
                             >
                                 <div>
                                     <img
@@ -113,7 +109,7 @@
                                 </div>
                             </div>
                             <div
-                                class="hero-section__img-section__imgs__container2"
+                                class="hero-section__img-section__imgs__right-img"
                             >
                                 <div>
                                     <img
@@ -126,13 +122,13 @@
                     </article>
 
                     <div class="hero-section__content-section">
-                        <h1 class="hero-section__content-section__heading1">
+                        <div class="hero-section__content-section__heading1">
                             Explore the world!
                             <img
                                 src="/assets/work 1.png"
                                 alt="travel bag icon"
                             />
-                        </h1>
+                        </div>
                         <h2 class="hero-section__content-section__heading2">
                             Travel <span>top destination</span> of the world
                         </h2>
@@ -237,7 +233,9 @@
 
                 <section class="testimonial-section">
                     <h1 class="testimonial-section__h1">TESTIMONIALS</h1>
-                    <h2 class="testimonial-section__h2">Trust our clients</h2>
+                    <h2 id="carousel-heading" class="testimonial-section__h2">
+                        Trust our clients
+                    </h2>
                     <section class="splide" aria-labelledby="carousel-heading">
                         <div class="splide__arrows">
                             <button
@@ -374,7 +372,7 @@
                 </section>
             </main>
         </div>
+        <script type="module" src="./src/script/splide.js"></script>
         <script type="module" src="./src/script/index.js"></script>
-        <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     </body>
 </html>

@@ -1,23 +1,8 @@
-import Splide from '@splidejs/splide';
-
-var elms = document.getElementsByClassName('splide');
-
-for (var i = 0; i < elms.length; i++) {
-    new Splide(elms[i], {
-        type: 'loop',
-        perPage: 1,
-        gap: 0,
-        padding: 0,
-        focus: 'center', // Crucial for centering
-        arrows: true,
-        pagination: true,
-    }).mount();
-}
-
 const hamburger = document.querySelector('#hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const hideMenuBtn = document.querySelector('.nav-menu__menu-btn--hide');
-const isMobileQuery = window.matchMedia('(max-width: 430px)');
+const mobileWidth = '430px';
+const isMobileQuery = window.matchMedia(`(max-width: ${mobileWidth})`);
 
 /**
  * Checks if the current viewport matches the mobile media query (max-width: 430px).

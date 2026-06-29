@@ -1,6 +1,46 @@
 body {
     font-family: 'Circular Std', sans-serif;
+    h1 {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: 20%;
+        color: $secondary-color;
+    }
+    h2 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 120%;
+        letter-spacing: 0%;
+    }
     p {
-        color: rgba(25, 24, 37, 0.75);
+        line-height: 160%;
+        letter-spacing: 0%;
+        color: $p-color;
+        font-weight: 400;
+        font-size: 15px;
+    }
+    @include for-device-width('md') {
+        h1 {
+            font-size: 23px;
+        }
+        h2 {
+            font-size: 38px;
+        }
+        p {
+            font-size: 19px;
+        }
+    }
+    @include for-device-width('lg') {
+        h1 {
+            font-size: 29px;
+        }
+        h2 {
+            font-size: 55px;
+        }
+        p {
+            font-size: 24px;
+            font-weight: 400;
+        }
     }
 }

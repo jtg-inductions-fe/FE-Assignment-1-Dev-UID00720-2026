@@ -3,15 +3,8 @@
     padding-top: 100px;
     &__h1 {
         padding-top: 5px;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 120%;
-        letter-spacing: 20%;
-        color: $secondary-color;
     }
     &__h2 {
-        font-weight: bold;
-        font-size: 30px;
         padding: 15px;
     }
     .splide {
@@ -25,7 +18,7 @@
             right: 0;
             display: flex;
             justify-content: space-between;
-            z-index: 10;
+            z-index: 2;
             button {
                 padding: 0px;
                 width: 62px;
@@ -48,7 +41,7 @@
             padding: 0;
             list-style: none;
             pointer-events: auto;
-            z-index: 10;
+            z-index: 2;
             li {
                 margin: 0;
                 display: block;
@@ -90,9 +83,9 @@
             &__name {
                 padding-top: 70px;
                 font-size: 24px;
-                color: rgba(25, 24, 37, 0.75);
+                color: #191825bf;
                 span {
-                    color: rgba(255, 87, 34, 1);
+                    color: #ff5722;
                 }
             }
             &__rating {
@@ -128,15 +121,8 @@
         padding: 0px;
         &__h1 {
             padding: 0px;
-            font-size: 23px;
-            font-weight: 700;
-            line-height: 120%;
-            letter-spacing: 20%;
-            color: $secondary-color;
         }
         &__h2 {
-            font-weight: bold;
-            font-size: 38px;
             padding: 10px;
         }
 
@@ -151,7 +137,7 @@
                 right: 0;
                 display: flex;
                 justify-content: space-between;
-                z-index: 10;
+                z-index: 2;
                 button {
                     padding: 0px;
                     width: 100px;
@@ -214,16 +200,7 @@
         background-position: center 32%;
         margin: -$desktop-padding;
         margin-top: 28px;
-        &__h1 {
-            font-size: 30px;
-            font-weight: 700;
-            line-height: 120%;
-            letter-spacing: 20%;
-            color: $secondary-color;
-        }
         &__h2 {
-            font-weight: bold;
-            font-size: 55px;
             padding: 22px;
         }
 
@@ -237,7 +214,7 @@
                 right: 0;
                 display: flex;
                 justify-content: space-between;
-                z-index: 10;
+                z-index: 2;
                 button {
                     padding: 0px;
                     width: 125px;

@@ -1,6 +1,11 @@
 $primary-color: #5d50c6;
 $secondary-color: #f85e9f;
-
+$p-color: #191825bf;
+$light-btn-border: #eeeeee;
 $mobile-padding: 15px;
 $tablet-padding: 60px;
 $desktop-padding: 150px;
+$breakpoints: (
+    md: 431px,
+    lg: 1024px,
+);

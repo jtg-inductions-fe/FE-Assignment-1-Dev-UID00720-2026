@@ -1,7 +1,4 @@
 * {
-    body {
-        overflow-x: hidden;
-    }
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -16,4 +13,7 @@
         border: none;
         background-color: transparent;
     }
+}
+body {
+    overflow-x: hidden;
 }
