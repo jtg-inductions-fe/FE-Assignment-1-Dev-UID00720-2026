@@ -23,11 +23,6 @@ header {
     .nav-menu__mob-nav-only {
         display: block;
     }
-    .nav-menu__nav-links {
-        a {
-            color: rgba(25, 24, 37, 0.5);
-        }
-    }
 }
 .header-section {
     display: flex;
@@ -57,7 +52,7 @@ header {
     width: 100%;
     height: 100vh;
     opacity: 0.9;
-    z-index: 1000;
+    z-index: 3;
     ul {
         margin: auto;
         width: 100%;
@@ -84,7 +79,7 @@ header {
         display: block;
     }
     #hamburger {
-        z-index: 1001;
+        z-index: 2;
     }
     header {
         display: flex;
@@ -153,6 +148,7 @@ header {
                     .nav-menu__mob-nav-only {
                         display: none;
                     }
+
                     display: flex;
                     justify-content: space-between;
                     width: 100%;

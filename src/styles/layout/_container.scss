@@ -1,9 +1,9 @@
 .container {
     position: relative;
-    padding: 0px $mobile-padding;
+    padding: 0px $sm-padding;
     .blur-orange-bg {
         position: absolute;
-        z-index: 1000;
+        z-index: 1;
         opacity: 0.5;
         background-color: rgba(255, 87, 34, 1);
         width: 272px;
@@ -16,7 +16,7 @@
 
 @include for-device-width('md') {
     .container {
-        padding: 0px $tablet-padding;
+        padding: 0px $md-padding;
         .blur-orange-bg {
             width: 500px;
             height: 500px;
@@ -29,7 +29,7 @@
 
 @include for-device-width('lg') {
     .container {
-        padding: 0px $desktop-padding;
+        padding: 0px $lg-padding;
         .blur-orange-bg {
             width: 600px;
             height: 494.9px;

@@ -27,7 +27,7 @@
         background-size: contain;
         &__imgs {
             width: 100%;
-            &__container1 {
+            &__left-img {
                 width: 35%;
                 display: flex;
                 flex-direction: column;
@@ -37,7 +37,7 @@
                     width: 100%;
                 }
             }
-            &__container2 {
+            &__right-img {
                 width: 35%;
                 display: flex;
                 align-items: center;
@@ -51,7 +51,7 @@
             gap: 15px;
             padding-top: 40px;
 
-            &__container1 {
+            &__left-img {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
@@ -73,7 +73,7 @@
             width: 224px;
             margin: auto;
             border-radius: 100px;
-            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 10px 15px #00000026;
         }
         &__heading2 {
             font-size: 40px;
@@ -85,12 +85,11 @@
         }
         &__para {
             padding: 8px 4px;
-            color: gray;
             line-height: 25px;
         }
         &__btns {
             .primary-btn {
-                box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.15);
+                box-shadow: 0px 20px 15px #00000026;
                 margin: 20px 0px;
                 height: 65px;
                 width: 100%;
@@ -103,7 +102,7 @@
                 justify-content: center;
                 gap: 8px;
                 align-items: center;
-                border: 1px solid #eeeeee;
+                border: 1px solid $light-btn-border;
                 margin-top: 5px;
                 height: 65px;
                 width: 100%;
@@ -127,21 +126,6 @@
     justify-content: center;
     gap: 30px;
     column-gap: 20px;
-    .tripadvisor {
-        width: 130px;
-    }
-    .expedia {
-        width: 70px;
-    }
-    .booking {
-        width: 120px;
-    }
-    .airbnb {
-        width: 65px;
-    }
-    .orbitz {
-        width: 110px;
-    }
 }
 
 //tablet
@@ -175,7 +159,7 @@
                 display: flex;
                 padding-top: 0px;
                 gap: 4%;
-                &__container1 {
+                &__left-img {
                     margin-top: 10%;
                     width: 35%;
                     gap: 30px;
@@ -183,7 +167,7 @@
                         width: 100%;
                     }
                 }
-                &__container2 {
+                &__right-img {
                     margin-top: 10%;
                     width: 35%;
                     div {
@@ -205,8 +189,6 @@
             &__para {
                 max-width: 450px;
                 padding-top: 25px;
-                line-height: 150%;
-                font-size: 19px;
                 margin: auto;
             }
             &__btns {
@@ -249,21 +231,6 @@
         justify-content: center;
         gap: 30px;
         column-gap: 25px;
-        .tripadvisor {
-            width: 32%;
-        }
-        .expedia {
-            width: 18%;
-        }
-        .booking {
-            width: 30%;
-        }
-        .airbnb {
-            width: 17%;
-        }
-        .orbitz {
-            width: 28%;
-        }
     }
 }
 
@@ -272,7 +239,7 @@
     .hero-section {
         display: flex;
         flex-direction: row-reverse;
-        padding-top: 1%;
+        padding-top: 0px;
         min-width: 865px;
         &__img-section {
             margin: auto;
@@ -303,7 +270,7 @@
                 display: flex;
                 padding-top: 0px;
                 gap: 4%;
-                &__container1 {
+                &__left-img {
                     margin-top: 10%;
                     width: 35%;
                     gap: 40px;
@@ -311,7 +278,7 @@
                         width: 100%;
                     }
                 }
-                &__container2 {
+                &__right-img {
                     margin-top: 10%;
                     width: 35%;
                     div {
@@ -321,7 +288,7 @@
             }
         }
         &__content-section {
-            padding-top: 2%;
+            padding-top: 60px;
             &__heading1 {
                 margin: 0px;
                 margin-left: 10px;
@@ -341,9 +308,6 @@
             }
             &__para {
                 margin-top: 3%;
-                font-size: 24px;
-                font-weight: 400;
-                line-height: 160%;
                 text-align: left;
                 width: 450px;
             }
@@ -351,8 +315,7 @@
                 width: 450px;
                 display: flex;
                 justify-content: left;
-                margin-top: 40px;
-                display: flex;
+                margin-top: 80px;
                 gap: 20px;
                 align-items: center;
                 button {
@@ -383,25 +346,10 @@
         }
     }
     .websites-logo {
-        margin-top: 90px;
+        margin-top: 100px;
         display: flex;
         width: 100%;
         justify-content: space-between;
         gap: 10px;
-        .tripadvisor {
-            width: 18%;
-        }
-        .expedia {
-            width: 10%;
-        }
-        .booking {
-            width: 16%;
-        }
-        .airbnb {
-            width: 9%;
-        }
-        .orbitz {
-            width: 14%;
-        }
     }
 }
