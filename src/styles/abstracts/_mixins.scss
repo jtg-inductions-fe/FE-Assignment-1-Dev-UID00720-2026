@@ -1,0 +1,34 @@
+// --- Variables ---
+$breakpoint-mobile: 430px;
+$breakpoint-tablet: 1023px;
+$breakpoint-laptop: 1024px;
+
+// --- Mixins ---
+
+// 1. Tablet + Mobile (max-width: 1023px)
+@mixin tablet-and-mobile {
+  @media screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+// 2. Mobile Only (max-width: 430px)
+@mixin mobile-only {
+  @media screen and (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+// 3. Tablet Only (min: 431px and max: 1023px)
+@mixin tablet-only {
+  @media screen and (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+// 4. Laptop Only (min-width: 1024px)
+@mixin laptop-only {
+  @media screen and (min-width: $breakpoint-laptop) {
+    @content;
+  }
+}   

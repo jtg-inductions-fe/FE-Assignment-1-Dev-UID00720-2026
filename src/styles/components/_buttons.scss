@@ -1,0 +1,21 @@
+.primary-btn{
+    cursor: pointer;
+    background-color: $primary-color;
+    padding: 22px 40px;
+    border: none;
+    border-radius: 100px;
+    font-size: medium;
+    font-weight: 600;
+    color: white;
+    
+}
+
+.secondary-btn{
+    cursor: pointer;
+    background-color: $secondary-color;
+    padding: 22px 40px;
+    border: none;
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 100px;
+}

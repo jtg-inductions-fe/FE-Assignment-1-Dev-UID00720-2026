@@ -5,9 +5,36 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/styles/main.scss" />
+        <link href="https://cdn.jsdelivr.net/npm/@vetixy/circular-std@1.0.0/dist/index.min.css" rel="stylesheet">
+
     </head>
     <body>
-        <div>This is develop branch</div>
+        <header>
+            <div class="header-section">
+                <div class="header-section__icon"><img src="/assets/appLogo.svg" alt="Travlog-logo"></div>
+
+                <div class="header-section__icon" id="hamburger">
+                    <button type="button"><img src="/assets/hamburger.svg" alt="hamburger-icon"></button>
+                </div>
+
+                <nav class="nav-menu">
+                    <ul>
+                        <li><button class="nav-menu__hide-menu-btn" type="button">X</button></li>
+                        <li class="nav-menu__nav-links"><a href="#home">Home</a></li>
+                        <li class="nav-menu__nav-links"><a href="#discover">Discover</a></li>
+                        <li class="nav-menu__nav-links"><a href="#special-deals">Special Deals</a></li>
+                        <li class="nav-menu__nav-links"><a class="last-hamburger-nav-for-tablet" href="#contact">Contact</a></li>
+                        <li class="nav-menu__mob-nav-only"><a href="#Log-In">Log In</a></li>
+                        <li class="nav-menu__mob-nav-only"><a class="last-hamburger-nav-for-mobile" href="#Sign-Up">Sign up</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="login-sign-btns">
+                <button type="button" class="secondary-btn">Log In</button>
+                <button type="button" class="primary-btn">Sign Up</button>
+            </div>
+        </header>
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
