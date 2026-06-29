@@ -1,8 +1,10 @@
+import * as Constants from './constants';
 const hamburger = document.querySelector('#hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const hideMenuBtn = document.querySelector('.nav-menu__menu-btn--hide');
-const mobileWidth = '430px';
-const isMobileQuery = window.matchMedia(`(max-width: ${mobileWidth})`);
+const isMobileQuery = window.matchMedia(
+    `(max-width: ${Constants.mobileWidth})`,
+);
 
 /**
  * Checks if the current viewport matches the mobile media query (max-width: 430px).

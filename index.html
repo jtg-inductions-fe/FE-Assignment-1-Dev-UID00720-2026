@@ -156,37 +156,117 @@
                     </div>
                 </section>
                 <article class="websites-logo">
-                    <img
-                        class="tripadvisor"
-                        src="/assets/tripadvisor.svg"
-                        alt="trip advisor logo"
-                    />
-                    <img
-                        class="expedia"
-                        src="/assets/expedia.svg"
-                        alt="expedia logo"
-                    />
-                    <img
-                        class="booking"
-                        src="/assets/booking.com.svg"
-                        alt="booking.com logo"
-                    />
-                    <img
-                        class="airbnb"
-                        src="/assets/airbnb.svg"
-                        alt="airbnb logo"
-                    />
-                    <img
-                        class="orbitz"
-                        src="/assets/orbitz.svg"
-                        alt="orbitz logo"
-                    />
+                    <picture>
+                        <source
+                            media="(width <= 430px)"
+                            srcset="/assets/tripadvisor.svg"
+                            width="130px"
+                        />
+                        <source
+                            media="(width <= 1023px)"
+                            srcset="/assets/tripadvisor.svg"
+                            width="210px"
+                        />
+                        <source
+                            media="(width >= 1024px)"
+                            srcset="/assets/tripadvisor.svg"
+                            width="280px"
+                        />
+                        <img
+                            src="/assets/tripadvisor.svg"
+                            alt="Chris standing up holding his daughter Elva"
+                        />
+                    </picture>
+                    <picture>
+                        <source
+                            media="(width <= 430px)"
+                            srcset="/assets/expedia.svg"
+                            width="70px"
+                        />
+                        <source
+                            media="(width <= 1023px)"
+                            srcset="/assets/expedia.svg"
+                            width="115px"
+                        />
+                        <source
+                            media="(width >= 1024px)"
+                            srcset="/assets/expedia.svg"
+                            width="150px"
+                        />
+                        <img
+                            src="/assets/expedia.svg"
+                            alt="Chris standing up holding his daughter Elva"
+                        />
+                    </picture>
+                    <picture>
+                        <source
+                            media="(width <= 430px)"
+                            srcset="/assets/booking.com.svg"
+                            width="120px"
+                        />
+                        <source
+                            media="(width <= 1023px)"
+                            srcset="/assets/booking.com.svg"
+                            width="190px"
+                        />
+                        <source
+                            media="(width >= 1024px)"
+                            srcset="/assets/booking.com.svg"
+                            width="250px"
+                        />
+                        <img
+                            src="/assets/booking.com.svg"
+                            alt="Chris standing up holding his daughter Elva"
+                        />
+                    </picture>
+                    <picture>
+                        <source
+                            media="(width <= 430px)"
+                            srcset="/assets/airbnb.svg"
+                            width="65px"
+                        />
+                        <source
+                            media="(width <= 1023px)"
+                            srcset="/assets/airbnb.svg"
+                            width="100px"
+                        />
+                        <source
+                            media="(width >= 1024px)"
+                            srcset="/assets/airbnb.svg"
+                            width="130px"
+                        />
+                        <img
+                            src="/assets/airbnb.svg"
+                            alt="Chris standing up holding his daughter Elva"
+                        />
+                    </picture>
+                    <picture>
+                        <source
+                            media="(width <= 430px)"
+                            srcset="/assets/orbitz.svg"
+                            width="110px"
+                        />
+                        <source
+                            media="(width <= 1023px)"
+                            srcset="/assets/orbitz.svg"
+                            width="180px"
+                        />
+                        <source
+                            media="(width >= 1024px)"
+                            srcset="/assets/orbitz.svg"
+                            width="240px"
+                        />
+                        <img
+                            src="/assets/orbitz.svg"
+                            alt="Chris standing up holding his daughter Elva"
+                        />
+                    </picture>
                 </article>
 
                 <section class="travel-section">
                     <div class="travel-section__img">
                         <img
-                            src="public/assets/travellingImage.svg"
+                            src="/assets/travellingImage.svg"
                             alt="Travelling image"
                         />
                     </div>
@@ -194,14 +274,11 @@
                     <div class="travel-section__content">
                         <div class="blur-yellow-bg"></div>
                         <div class="star-logo">
-                            <img
-                                src="public/assets/Frame 50.svg"
-                                alt="star logo"
-                            />
+                            <img src="/assets/Frame 50.svg" alt="star logo" />
                         </div>
-                        <h1 class="travel-section__content__h1">
+                        <h5 class="travel-section__content__h5">
                             TRAVEL POINT
-                        </h1>
+                        </h5>
                         <h2 class="travel-section__content__h2">
                             We helping you find your dream location
                         </h2>
@@ -212,19 +289,19 @@
                         </p>
                         <div class="travel-points">
                             <div class="travel-points__point">
-                                <h3>500+</h3>
+                                <h4>500+</h4>
                                 <p>Holiday Package</p>
                             </div>
                             <div class="travel-points__point">
-                                <h3>100</h3>
+                                <h4>100</h4>
                                 <p>Luxury Hotel</p>
                             </div>
                             <div class="travel-points__point">
-                                <h3>7</h3>
+                                <h4>7</h4>
                                 <p>Premium Airlines</p>
                             </div>
                             <div class="travel-points__point">
-                                <h3>2k+</h3>
+                                <h4>2k+</h4>
                                 <p>Happy Customer</p>
                             </div>
                         </div>
@@ -232,7 +309,7 @@
                 </section>
 
                 <section class="testimonial-section">
-                    <h1 class="testimonial-section__h1">TESTIMONIALS</h1>
+                    <h5 class="testimonial-section__h5">TESTIMONIALS</h5>
                     <h2 id="carousel-heading" class="testimonial-section__h2">
                         Trust our clients
                     </h2>

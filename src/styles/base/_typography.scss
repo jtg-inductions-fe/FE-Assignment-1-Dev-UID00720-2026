@@ -1,6 +1,6 @@
 body {
     font-family: 'Circular Std', sans-serif;
-    h1 {
+    h5 {
         font-size: 15px;
         font-weight: 700;
         line-height: 120%;
@@ -21,7 +21,7 @@ body {
         font-size: 15px;
     }
     @include for-device-width('md') {
-        h1 {
+        h5 {
             font-size: 23px;
         }
         h2 {
@@ -32,7 +32,7 @@ body {
         }
     }
     @include for-device-width('lg') {
-        h1 {
+        h5 {
             font-size: 29px;
         }
         h2 {
