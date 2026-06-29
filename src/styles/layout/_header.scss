@@ -31,7 +31,6 @@ header{
     align-items: center;
     
     #hamburger{
-        margin: 5px;
         button{
             cursor: pointer;
         }
@@ -89,7 +88,7 @@ header{
                 }
             }
         }
-        padding: 35px 15px;
+        padding: 35px 0px;
         .nav-menu__mob-nav-only{
             display:block;
         }
@@ -104,7 +103,7 @@ header{
     header{
         display: flex;
         justify-content: space-between;
-        padding: 32px 55px;
+        padding: 32px 0px;
         .header-section{
             width: 53%;
             flex-direction: row-reverse;
@@ -136,10 +135,9 @@ header{
     }
     header{
         width: 100%;
-        padding: 115px 160px;
+        padding: 115px 0px;
         height: 112px;
         align-items: center;
-        margin: auto;
         display: flex;
         justify-content: space-between;
         .header-section{

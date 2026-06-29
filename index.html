@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Travlog</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/styles/main.scss" />
@@ -9,9 +9,10 @@
 
     </head>
     <body>
-        <header>
-            <div class="header-section">
-                <div class="header-section__icon"><img src="/assets/appLogo.svg" alt="Travlog-logo"></div>
+        <div class="container">
+            <header>
+                <div class="header-section">
+                    <div class="header-section__icon"><img src="/assets/appLogo.svg" alt="Travlog-logo"></div>
 
                 <div class="header-section__icon" id="hamburger">
                     <button type="button"><img src="/assets/hamburger.svg" alt="hamburger-icon"></button>
@@ -30,11 +31,53 @@
                 </nav>
             </div>
 
-            <div class="login-sign-btns">
-                <button type="button" class="secondary-btn">Log In</button>
-                <button type="button" class="primary-btn">Sign Up</button>
-            </div>
-        </header>
+                <div class="login-sign-btns">
+                    <button type="button" class="secondary-btn">Log In</button>
+                    <button type="button" class="primary-btn">Sign Up</button>
+                </div>
+            </header>
+            <div class="blur-orange-bg"></div>
+            <main>
+                <section class="hero-section">
+                    <article class="hero-section__img-section">
+                        <img class="hero-section__img-section__location-icon" src="/assets/Frame 16.svg" alt="location icon">
+                        <img class="hero-section__img-section__connect-icon" src="/assets/Frame 17.svg" alt="connect icon">
+                        <img class="hero-section__img-section__top-places-icon" src="/assets/Frame 18.svg" alt="top places icon">
+                        <div class="hero-section__img-section__imgs">
+                            <div class="hero-section__img-section__imgs__container1">
+                                <div><img src="/assets/Rectangle 1.png" alt="Travel image at beach"></div>
+                                <div><img src="/assets/Rectangle 2.png" alt="Travel image at mountains"></div>
+                            </div>
+                            <div class="hero-section__img-section__imgs__container2">
+                                <div><img src="/assets/Rectangle 3.png" alt="Travel image at city"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="hero-section__content-section">
+                        <h1 class="hero-section__content-section__heading1">Explore the world! <img src="/assets/work 1.png" alt="travel bag icon"></h1>
+                        <h2 class="hero-section__content-section__heading2">Travel <span>top destination</span> of the world</h2>
+                        <p class="hero-section__content-section__para">We always make our customer happy by providing as many choices as possible </p>
+
+                        <div class="hero-section__content-section__btns">
+                            <button class="primary-btn">Get Started</button>
+                            <button class="secondary-btn"><img src="/assets/watchDemo.png" alt="watch demo logo"> Watch Demo</button>
+                        </div>
+                    </div>
+                    <div class="triangles-image"><img src="/assets/triangles.svg" alt="Decorator image"></div>
+                </section>
+                <article class="websites-logo">
+                    <img class="tripadvisor" src="/assets/tripadvisor.svg" alt="trip advisor logo">
+                    <img class="expedia" src="/assets/expedia.svg" alt="expedia logo">
+                    <img class="booking" src="/assets/booking.com.svg" alt="booking.com logo">
+                    <img class="airbnb" src="/assets/airbnb.svg" alt="airbnb logo">
+                    <img class="orbitz" src="/assets/orbitz.svg" alt="orbitz logo">
+                </article>
+
+
+            </main>
+        </div>
+
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
