@@ -1,4 +1,4 @@
-.nav-menu__hide-menu-btn{
+.nav-menu__menu-btn--hide{
     position: fixed;
     right: 2%;
     top: 2%;
@@ -19,6 +19,10 @@
 }
 header{
     position: relative;
+    padding: 35px 0px;
+    .nav-menu__mob-nav-only{
+        display:block;
+    }
     .nav-menu__nav-links{
         a{
             color: rgba(25, 24, 37, 0.5);
@@ -37,17 +41,14 @@ header{
     }
     .header-section__icon{
         img{
-            width: 50px;
+            width: 40px;
         }
     }
 }
 .nav-menu__mob-nav-only{
     display: none;
 }
-
-//css for tablet + mobile
-@include tablet-and-mobile {
-    .nav-menu {
+.nav-menu {
       display: none;
       position: fixed;
       top: 0;
@@ -60,54 +61,42 @@ header{
       ul{
           margin: auto;
           width: 100%;
-          li{
-              margin: 5px;
-              text-align: center;
-              cursor: pointer;
-              a{
-                    width: 100%;
-                    color: white;
-                    height: 100px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: larger;
-                }
+        li{
+            margin: 5px;
+            text-align: center;
+            cursor: pointer;
+            a{
+                width: 100%;
+                color: white;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: larger;
             }
-        }
-    }
-}
-
-//for mobile only
-@include mobile-only{
-    header{
-        .header-section{
-            .header-section__icon{
-                img{
-                    width: 40px;
-                }
-            }
-        }
-        padding: 35px 0px;
-        .nav-menu__mob-nav-only{
-            display:block;
         }
     }
 }
 
 //for tablet only
-@include tablet-only {
+@include for-device-width('md') {
     .login-sign-btns{
         display:block;
+    }
+    #hamburger{
+        z-index: 1001;
     }
     header{
         display: flex;
         justify-content: space-between;
         padding: 32px 0px;
+        .nav-menu__mob-nav-only{
+            display:none;
+        }
         .header-section{
             width: 53%;
             flex-direction: row-reverse;
-            .header-section__icon{
+            &__icon{
                 img{
                     width: 40px;
                 }
@@ -125,7 +114,7 @@ header{
 }
 
 //css for laptop only
-@include laptop-only{
+@include for-device-width('lg'){
     .login-sign-btns{
         display:block;
         min-width: 278px;
@@ -140,25 +129,47 @@ header{
         align-items: center;
         display: flex;
         justify-content: space-between;
+        
         .header-section{
             width: 61%;
+            flex-direction: row;
+            .header-section__icon{
+                img{
+                    width: 50px;
+                }
+            }
             .nav-menu{
+                position: static;
+                background-color: transparent;
                 margin: 2px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 width: 640px;
                 ul{
-                    .nav-menu__hide-menu-btn{
+                    .nav-menu__menu-btn--hide{
                         display: none;
+                    }
+                    .nav-menu__mob-nav-only{
+                        display:none;
                     }
                     display: flex;
                     justify-content: space-between;
                     width: 100%;
                     li{
-                        font-size: large;
+                        a{
+                            color: grey;
+                        }
                     }
                 }
+            }
+        }
+        .login-sign-btns{
+            width: auto;
+            min-width: 300px;
+            button{
+                font-size: 16px;
+                padding: 22px 46px;
             }
         }   
     }
