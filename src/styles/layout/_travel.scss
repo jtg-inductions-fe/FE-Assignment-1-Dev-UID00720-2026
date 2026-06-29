@@ -48,7 +48,7 @@
 
 @include for-device-width('md') {
     .travel-section {
-        padding-top: 125px;
+        padding-top: 110px;
 
         &__img {
             margin-left: -$md-padding;
@@ -134,8 +134,7 @@
     .star-logo {
         position: absolute;
         display: block;
-        width: 100%;
-        right: -88%;
+        right: -140px;
         top: 50%;
         img {
             width: 320px;

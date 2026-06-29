@@ -85,7 +85,6 @@
         }
         &__para {
             padding: 8px 4px;
-            line-height: 25px;
         }
         &__btns {
             .primary-btn {
@@ -292,7 +291,7 @@
             &__heading1 {
                 margin: 0px;
                 margin-left: 10px;
-                width: 270px;
+                max-width: 270px;
                 font-size: 18px;
                 img {
                     width: 30px;
@@ -307,15 +306,15 @@
                 font-size: 5.5rem;
             }
             &__para {
-                margin-top: 3%;
+                margin-top: 2%;
                 text-align: left;
-                width: 450px;
+                max-width: 450px;
             }
             &__btns {
-                width: 450px;
+                max-width: 450px;
                 display: flex;
                 justify-content: left;
-                margin-top: 80px;
+                margin-top: 10px;
                 gap: 20px;
                 align-items: center;
                 button {
