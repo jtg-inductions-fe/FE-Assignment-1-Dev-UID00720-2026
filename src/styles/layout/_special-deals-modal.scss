@@ -1,0 +1,153 @@
+.deals-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000080;
+    display: none;
+    z-index: 10;
+    &__special-deals {
+        position: fixed;
+        bottom: 0;
+        width: 84%;
+        min-height: 500px;
+        left: 50%;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        transform: translateX(-50%);
+        background-color: white;
+        &__close-btn {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+        }
+        &__h6 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            color: #f4436c;
+            font-size: 12px;
+            line-height: 100%;
+            font-weight: 600;
+            letter-spacing: 10%;
+            margin-top: 25px;
+        }
+        &__h4 {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 8px;
+        }
+        &__p {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: 3%;
+            text-align: center;
+            margin-top: 10px;
+            color: #9ca3af;
+        }
+    }
+}
+.wheel-section {
+    .wheel {
+        margin-top: 30px;
+        position: relative;
+        &__triangle {
+            position: absolute;
+            left: 50%;
+            top: -10px;
+            z-index: 10;
+            transform: translateX(-50%);
+            height: 13px;
+            width: 16px;
+            clip-path: polygon(100% 0, 50% 100%, 0 0);
+            background-color: rgba(170, 170, 170, 1);
+        }
+        &__circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            width: 227px;
+            height: 227px;
+            background-color: rgba(238, 238, 238, 1);
+            border-radius: 50%;
+            margin: auto;
+        }
+    }
+    .loading-wheel {
+        display: none;
+    }
+    .spin-wheel {
+        &__triangle {
+            background-color: rgba(244, 67, 108, 1);
+        }
+        &__circle {
+            position: relative;
+            &__spin-btn {
+                width: 43px;
+                height: 43px;
+                border-radius: 50%;
+                border: 3px solid rgba(244, 67, 108, 1);
+                font-size: 10px;
+                cursor: pointer;
+                font-weight: 700;
+                letter-spacing: 4%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            flex-wrap: wrap;
+            &__inner {
+                height: 50%;
+                width: 50%;
+                border: 2px solid white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p {
+                    color: white;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                }
+            }
+            .prize1 {
+                border-top-left-radius: 100%;
+                background-color: rgba(244, 67, 108, 1);
+                p {
+                    transform: rotate(-45deg);
+                }
+            }
+            .prize2 {
+                border-top-right-radius: 100%;
+                background-color: rgba(124, 58, 237, 1);
+                p {
+                    transform: rotate(45deg);
+                }
+            }
+            .prize3 {
+                border-bottom-left-radius: 100%;
+                background-color: rgba(6, 182, 212, 1);
+                p {
+                    transform: rotate(225deg);
+                }
+            }
+            .prize4 {
+                border-bottom-right-radius: 100%;
+                background-color: rgba(251, 191, 36, 1);
+                p {
+                    transform: rotate(-225deg);
+                }
+            }
+        }
+    }
+}

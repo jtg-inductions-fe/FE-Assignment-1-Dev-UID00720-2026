@@ -84,3 +84,20 @@ for (let linksArrow of linksArrows) {
         }
     });
 }
+
+const specialDealsOpenBtn = document.querySelector('.special-deals-btn');
+const specialDealsModal = document.querySelector('.deals-modal');
+const specialDealsCloseBtn = document.querySelector(
+    '.deals-modal__special-deals__close-btn',
+);
+
+specialDealsOpenBtn.addEventListener('click', () => {
+    setMenuOpen(false);
+    document.body.style.overflow = 'hidden';
+    specialDealsModal.style.display = 'block';
+});
+
+specialDealsCloseBtn.addEventListener('click', () => {
+    document.body.style.overflow = '';
+    specialDealsModal.style.display = 'none';
+});

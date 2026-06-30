@@ -11,6 +11,45 @@
         />
     </head>
     <body>
+        <div class="deals-modal">
+            <div class="deals-modal__special-deals">
+                <button class="deals-modal__special-deals__close-btn">
+                    <img src="public/assets/X.svg" alt="close modal button" />
+                </button>
+                <h6 class="deals-modal__special-deals__h6">
+                    <img src="public/assets/Gift.svg" alt="gift logo" /> SPECIAL
+                    DEALS
+                </h6>
+                <h4 class="deals-modal__special-deals__h4">Spin & Win!</h4>
+                <p class="deals-modal__special-deals__p">
+                    Tap the center of the wheel to spin
+                </p>
+                <div class="wheel-section">
+                    <div class="wheel loading-wheel">
+                        <div class="wheel__triangle"></div>
+                        <div class="wheel__circle">Loading...</div>
+                    </div>
+                    <div class="wheel spin-wheel">
+                        <div class="wheel__triangle spin-wheel__triangle"></div>
+                        <div class="wheel__circle spin-wheel__circle">
+                            <div class="spin-wheel__circle__spin-btn">Spin</div>
+                            <div class="spin-wheel__circle__inner prize1">
+                                <p>prize one</p>
+                            </div>
+                            <div class="spin-wheel__circle__inner prize2">
+                                <p>prize two</p>
+                            </div>
+                            <div class="spin-wheel__circle__inner prize3">
+                                <p>prize three</p>
+                            </div>
+                            <div class="spin-wheel__circle__inner prize4">
+                                <p>prize four</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <header>
                 <div class="header-section">
@@ -43,7 +82,7 @@
                             <li class="nav-menu__nav-links">
                                 <a href="#discover">Discover</a>
                             </li>
-                            <li class="nav-menu__nav-links">
+                            <li class="nav-menu__nav-links special-deals-btn">
                                 <a href="#special-deals">Special Deals</a>
                             </li>
                             <li class="nav-menu__nav-links">
