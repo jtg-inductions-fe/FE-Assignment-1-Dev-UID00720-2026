@@ -1,6 +1,12 @@
 // --- Mixins ---
-@mixin for-device-width($width) {
-    @media screen and (min-width: map-get($breakpoints, $width)) {
+@mixin for-device-width($width, $default: 0) {
+    // Attempt to get the value
+    $value: map-get($breakpoints, $width);
+
+    // Fallback to $default if $value is null
+    $final-value: if($value, $value, $default);
+
+    @media screen and (min-width: $final-value) {
         @content;
     }
 }

@@ -1,7 +1,7 @@
 body {
     font-family: 'Circular Std', sans-serif;
     h5 {
-        font-size: 0.94rem;
+        font-size: rem(15);
         font-weight: 700;
         line-height: 120%;
         letter-spacing: 20%;
@@ -9,37 +9,37 @@ body {
     }
     h2 {
         font-weight: 700;
-        font-size: 1.87rem;
+        font-size: rem(30);
         line-height: 120%;
         letter-spacing: 0%;
     }
     p {
         line-height: 160%;
         letter-spacing: 0%;
-        color: $p-color;
+        color: $para-color;
         font-weight: 400;
-        font-size: 0.94rem;
+        font-size: rem(15);
     }
     @include for-device-width('md') {
         h5 {
-            font-size: 1.44rem;
+            font-size: rem(23);
         }
         h2 {
-            font-size: 2.37rem;
+            font-size: rem(38);
         }
         p {
-            font-size: 1.18rem;
+            font-size: rem(18);
         }
     }
     @include for-device-width('lg') {
         h5 {
-            font-size: 1.81rem;
+            font-size: rem(29);
         }
         h2 {
-            font-size: 3.43rem;
+            font-size: rem(55);
         }
         p {
-            font-size: 1.56rem;
+            font-size: rem(25);
             font-weight: 400;
         }
     }
