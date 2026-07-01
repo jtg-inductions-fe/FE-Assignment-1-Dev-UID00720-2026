@@ -3,7 +3,7 @@
     padding-left: 10px;
     &__desc {
         &__logo {
-            padding: 15px 0px 15px 0px;
+            padding: 15px 0;
             font-size: 24px;
             font-weight: 900;
             line-height: 40px;
@@ -53,9 +53,9 @@
             }
         }
     }
-}
-.show-footer-navs {
-    display: block !important;
+    .show-footer-navs {
+        display: block;
+    }
 }
 .footer-decorator-img {
     display: none;
