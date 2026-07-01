@@ -84,12 +84,12 @@
             }
         }
         &__para {
-            padding: 8px 4px;
+            padding: 5px 4px;
         }
         &__btns {
             .primary-btn {
                 box-shadow: 0px 20px 15px #00000026;
-                margin: 20px 0px;
+                margin: 25px 0px;
                 height: 65px;
                 width: 100%;
                 font-size: 14px;
@@ -118,7 +118,7 @@
 
 //mobile
 .websites-logo {
-    padding-top: 20px;
+    padding-top: 10px;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -131,7 +131,7 @@
 @include for-device-width('md') {
     .hero-section {
         position: relative;
-        padding-top: 50px;
+        padding-top: 60px;
         &__img-section {
             margin: auto;
             width: 85%;
@@ -187,7 +187,7 @@
             }
             &__para {
                 max-width: 450px;
-                padding-top: 25px;
+                padding-top: 15px;
                 margin: auto;
             }
             &__btns {
@@ -197,7 +197,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top: 5px;
+                margin-top: 10px;
                 gap: 10px;
                 button {
                     font-size: 14px;
@@ -217,12 +217,12 @@
         .triangles-image {
             display: block;
             position: absolute;
-            left: -15px;
-            top: 1135px;
+            left: -25px;
+            top: 1125px;
         }
     }
     .websites-logo {
-        padding-top: 60px;
+        padding-top: 65px;
         display: flex;
         width: 70%;
         margin: auto;
@@ -255,8 +255,8 @@
             &__connect-icon {
                 position: absolute;
                 width: 17%;
-                top: 93%;
-                left: 58%;
+                top: 92%;
+                left: 56%;
             }
             &__top-places-icon {
                 position: absolute;
@@ -287,7 +287,7 @@
             }
         }
         &__content-section {
-            padding-top: 60px;
+            padding-top: 70px;
             &__heading1 {
                 margin: 0px;
                 margin-left: 10px;
@@ -314,7 +314,7 @@
                 max-width: 450px;
                 display: flex;
                 justify-content: left;
-                margin-top: 10px;
+                margin-top: 20px;
                 gap: 20px;
                 align-items: center;
                 button {
@@ -338,7 +338,7 @@
             display: block;
             position: absolute;
             left: -100px;
-            top: 880px;
+            top: 860px;
             img {
                 width: 82px;
             }

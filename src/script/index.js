@@ -6,7 +6,6 @@ const isMobileQuery = window.matchMedia(
     `(max-width: ${Constants.mobileWidth})`,
 );
 const linksArrows = document.querySelectorAll('.links-arrow');
-const footerNavLinks = document.querySelectorAll('.footer-links__nav-links');
 
 /**
  * Checks if the current viewport matches the mobile media query (max-width: 430px).
@@ -26,6 +25,7 @@ function getIsMobile() {
 function setMenuOpen(isOpen) {
     navMenu.classList.toggle('show', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    hamburger.setAttribute('aria-expanded', isOpen.toString());
 }
 
 hamburger.addEventListener('click', () => {
@@ -72,16 +72,10 @@ document.addEventListener('keydown', (event) => {
 // function to open footer nav links in mobile view when drop down arrow is clicked
 for (let linksArrow of linksArrows) {
     linksArrow.addEventListener('click', () => {
-        const companyNavLinks = footerNavLinks[0];
-        const contactNavLinks = footerNavLinks[1];
-        const meetNavLinks = footerNavLinks[2];
-        if (linksArrow.classList.contains('company-down-arrow')) {
-            companyNavLinks.classList.toggle('show-footer-navs');
-        } else if (linksArrow.classList.contains('contact-down-arrow')) {
-            contactNavLinks.classList.toggle('show-footer-navs');
-        } else if (linksArrow.classList.contains('meet-down-arrow')) {
-            meetNavLinks.classList.toggle('show-footer-navs');
-        }
+        const navLinks = linksArrow
+            .closest('.footer-links')
+            .querySelector('.footer-links__nav-links');
+        navLinks.classList.toggle('show-footer-navs');
     });
 }
 
