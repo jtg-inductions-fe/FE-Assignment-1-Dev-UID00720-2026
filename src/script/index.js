@@ -91,6 +91,8 @@ const specialDealsCloseBtn = document.querySelector(
     '.deals-modal__special-deals__close-btn',
 );
 
+// logics for spin wheel modal
+const spinBtn = document.querySelector('.spin-wheel__circle__spin-btn');
 specialDealsOpenBtn.addEventListener('click', () => {
     setMenuOpen(false);
     document.body.style.overflow = 'hidden';
@@ -100,4 +102,15 @@ specialDealsOpenBtn.addEventListener('click', () => {
 specialDealsCloseBtn.addEventListener('click', () => {
     document.body.style.overflow = '';
     specialDealsModal.style.display = 'none';
+});
+let alreadySpin = 0;
+spinBtn.addEventListener('click', () => {
+    const wheel = document.querySelector('.spin-wheel__circle');
+    wheel.style.transition = '';
+    wheel.style.transform = `rotate(${alreadySpin}deg)`;
+    alreadySpin += 360 * 8; // Base rotations to ensure it spins more
+    const randomDeg = Math.floor(Math.random() * 360);
+    const finalRotation = alreadySpin + randomDeg;
+    wheel.style.transition = 'transform 5s ease-out';
+    wheel.style.transform = `rotate(${finalRotation}deg)`;
 });

@@ -1,3 +1,12 @@
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .deals-modal {
     position: fixed;
     top: 0;
@@ -87,6 +96,7 @@
         }
         &__circle {
             position: relative;
+            transition: transform 5s ease-out;
             &__spin-btn {
                 width: 43px;
                 height: 43px;
