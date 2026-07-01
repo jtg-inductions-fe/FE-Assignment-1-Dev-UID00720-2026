@@ -25,6 +25,7 @@ function getIsMobile() {
 function setMenuOpen(isOpen) {
     navMenu.classList.toggle('show', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    hamburger.setAttribute('aria-expanded', isOpen.toString());
 }
 
 hamburger.addEventListener('click', () => {
