@@ -1,13 +1,13 @@
 .travel-section {
-    padding-top: 125px;
+    padding-top: 115px;
     text-align: center;
     &__img {
         margin-left: -$sm-padding;
     }
     &__content {
-        padding-top: 22px;
+        padding-top: 25px;
         &__h2 {
-            padding-top: 10px;
+            padding-top: 20px;
         }
         &__para {
             padding-top: 30px;
@@ -51,6 +51,7 @@
         padding-top: 110px;
 
         &__img {
+            margin-top: 15px;
             margin-left: -$md-padding;
             img {
                 width: 105%;
@@ -72,7 +73,7 @@
         }
     }
     .travel-points {
-        margin-top: 35px;
+        margin-top: 45px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 35px;
@@ -98,13 +99,13 @@
             }
         }
         &__content {
-            padding-top: 22px;
+            padding-top: 35px;
             text-align: left;
             &__h5 {
                 margin-top: 40px;
             }
             &__h2 {
-                padding-top: 20px;
+                padding-top: 25px;
             }
             &__para {
                 padding-top: 45px;
@@ -112,7 +113,7 @@
         }
     }
     .travel-points {
-        margin-top: 70px;
+        margin-top: 55px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 35px;

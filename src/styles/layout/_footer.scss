@@ -1,5 +1,5 @@
 .footer {
-    padding-top: 60px;
+    padding-top: 85px;
     padding-left: 10px;
     &__desc {
         &__logo {
@@ -15,10 +15,10 @@
             }
         }
         &__p {
-            padding: 15px 0px 15px 0px;
+            padding: 10px 0;
         }
         &__socials {
-            margin-top: 7px;
+            margin-top: 15px;
             padding: 5px;
             display: flex;
             gap: 30px;
@@ -64,7 +64,7 @@
 @include for-device-width('md') {
     .footer {
         position: relative;
-        padding-top: 155px;
+        padding-top: 165px;
         padding-left: 0px;
         &__desc {
             &__logo {

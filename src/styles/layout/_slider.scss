@@ -1,16 +1,16 @@
 .testimonial-section {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 110px;
     &__h5 {
-        padding-top: 5px;
+        padding-top: 0px;
     }
     &__h2 {
-        padding: 15px;
+        padding: 20px;
     }
     .splide {
         max-width: 500px;
         height: 550px;
-        margin: 2rem auto;
+        margin: 1rem auto;
         &__arrows {
             position: absolute;
             top: 10%;
@@ -93,7 +93,7 @@
                 flex-direction: row;
                 width: 56%;
                 margin: auto;
-                margin-top: 30px;
+                margin-top: 40px;
                 margin-bottom: 62px;
                 gap: 16px;
                 img {
@@ -117,13 +117,13 @@
         background-size: cover;
         background-position: center 55%;
         margin: -$md-padding;
-        margin-top: 20px;
+        margin-top: 10px;
         padding: 0px;
         &__h5 {
             padding: 0px;
         }
         &__h2 {
-            padding: 10px;
+            padding: 15px;
         }
 
         .splide {
@@ -199,7 +199,7 @@
         background-size: cover;
         background-position: center 32%;
         margin: -$lg-padding;
-        margin-top: 120px;
+        margin-top: 130px;
         &__h2 {
             padding: 22px;
         }
