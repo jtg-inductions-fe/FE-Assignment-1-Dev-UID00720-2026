@@ -69,15 +69,24 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-// function to open footer nav links in mobile view when drop down arrow is clicked
-for (let linksArrow of linksArrows) {
-    linksArrow.addEventListener('click', () => {
-        const navLinks = linksArrow
-            .closest('.footer-links')
-            .querySelector('.footer-links__nav-links');
-        navLinks.classList.toggle('show-footer-navs');
-    });
+/**
+ * Attaches click event listeners to footer arrows to toggle the visibility of mobile nav links.
+ * When an arrow is clicked, it finds the corresponding nav links within the same section
+ * and toggles the 'show-footer-navs' class.
+ *
+ * @returns {void}
+ */
+function openFooterLinks() {
+    for (let linksArrow of linksArrows) {
+        linksArrow.addEventListener('click', () => {
+            const navLinks = linksArrow
+                .closest('.footer-links-section')
+                .querySelector('.footer-links-section__nav-links');
+            navLinks.classList.toggle('show-footer-navs');
+        });
+    }
 }
+openFooterLinks();
 
 const specialDealsOpenBtn = document.querySelector('.special-deals-btn');
 const specialDealsModal = document.querySelector('.deals-modal');
