@@ -85,7 +85,7 @@
                 font-size: 24px;
                 color: #191825bf;
                 span {
-                    color: #ff5722;
+                    color: $orange-color;
                 }
             }
             &__rating {
@@ -112,7 +112,7 @@
 
 @include for-device-width('md') {
     .testimonial-section {
-        background-image: url('/assets/testimonialBackground.png');
+        background-image: url('/assets/testimonial-background.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center 55%;
@@ -194,7 +194,6 @@
 
 @include for-device-width('lg') {
     .testimonial-section {
-        background-image: url('/assets/testimonialBackground.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center 32%;
