@@ -1,7 +1,10 @@
+import * as Constants from './constants';
 const hamburger = document.querySelector('#hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const hideMenuBtn = document.querySelector('.nav-menu__menu-btn--hide');
-const isMobileQuery = window.matchMedia("(max-width: 430px)");
+const isMobileQuery = window.matchMedia(
+    `(max-width: ${Constants.mobileWidth})`,
+);
 
 /**
  * Checks if the current viewport matches the mobile media query (max-width: 430px).
@@ -15,7 +18,7 @@ function getIsMobile() {
  * Toggles the visibility of the navigation menu and manages body scroll behavior.
  * - Adds/removes the 'show' class to the nav menu.
  * - Sets body overflow to 'hidden' when open to prevent background scrolling.
- * 
+ *
  * @param {boolean} isOpen - True to open the menu, false to close it.
  */
 function setMenuOpen(isOpen) {
@@ -38,12 +41,14 @@ document.addEventListener('keydown', (event) => {
         setMenuOpen(false);
         return;
     }
-    
+
     if (event.key === 'Tab' && navMenu.classList.contains('show')) {
         const current = document.activeElement;
         const first = hideMenuBtn;
         const isMobile = getIsMobile();
-        const lastSelector = isMobile ? '.last-hamburger-nav-for-mobile' : '.last-hamburger-nav-for-tablet';
+        const lastSelector = isMobile
+            ? '.last-hamburger-nav-for-mobile'
+            : '.last-hamburger-nav-for-tablet';
         const last = navMenu.querySelector(lastSelector);
 
         if (event.shiftKey && current === first) {
@@ -51,9 +56,9 @@ document.addEventListener('keydown', (event) => {
             last?.focus();
             return;
         }
-        
+
         if (current === last) {
-            if (event.key === "Tab" && event.shiftKey) {
+            if (event.key === 'Tab' && event.shiftKey) {
                 return;
             }
             event.preventDefault();

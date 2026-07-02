@@ -1,44 +1,25 @@
-
-.travel-section{
+.travel-section {
     padding-top: 125px;
     text-align: center;
-    &__img{
-        margin-left: -$mobile-padding;
+    &__img {
+        margin-left: -$sm-padding;
     }
-    &__content{
+    &__content {
         padding-top: 22px;
-        &__h1{
-            font-size: 15px;
-            font-weight: 700;
-            font-style: Bold;
-            line-height: 120%;
-            letter-spacing: 20%;
-            color: $secondary-color;
+        &__h2 {
+            padding-top: 10px;
         }
-        &__h2{
-            padding-top: 20px;
-            font-weight: 700;
-            font-style: Bold;
-            font-size: 30px;
-            line-height: 120%;
-            letter-spacing: 0%;
-        }
-        &__para{
+        &__para {
             padding-top: 30px;
             width: 90%;
             margin: auto;
-            font-weight: 400;
-            size: 15px;
-            line-height: 160%;
-            letter-spacing: 0%;
-            color: rgba(25, 24, 37, 0.5);
         }
     }
 }
-.travel-points{
+.travel-points {
     padding-top: 30px;
-    &__point{
-        border: 1px solid rgba(25, 24, 37, 0.1);
+    &__point {
+        border: 1px solid #1819251a;
         border-radius: 32px;
         height: 150px;
         width: 90%;
@@ -49,59 +30,44 @@
         justify-content: center;
         align-items: center;
         gap: 11px;
-        h3{
-            color: rgba(255, 87, 34, 1);
+        h4 {
+            color: #ff5722;
             font-size: 35px;
         }
-        p{
+        p {
             font-size: 18px;
         }
     }
 }
-.star-logo{
+.star-logo {
     display: none;
 }
-.blur-yellow-bg{
+.blur-yellow-bg {
     display: none;
 }
 
-@include for-device-width('md'){
-    .travel-section{
+@include for-device-width('md') {
+    .travel-section {
         padding-top: 125px;
-        
-        &__img{
-            margin-left: -$tablet-padding;
-            img{
+
+        &__img {
+            margin-left: -$md-padding;
+            img {
                 width: 105%;
             }
         }
-        &__content{
+        &__content {
             padding-top: 22px;
-            &__h1{
+            &__h5 {
                 margin-top: 45px;
-                font-size: 23px;
-                font-weight: 700;
-                font-style: Bold;
-                line-height: 120%;
-                letter-spacing: 20%;
             }
-            &__h2{
+            &__h2 {
                 padding-top: 20px;
-                font-weight: 700;
-                font-style: Bold;
-                font-size: 38px;
-                line-height: 120%;
-                letter-spacing: 0%;
             }
-            &__para{
+            &__para {
                 padding-top: 30px;
                 width: 95%;
                 margin: auto;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 160%;
-                letter-spacing: 0%;
-                color: rgba(25, 24, 37, 0.5);
             }
         }
     }
@@ -112,50 +78,36 @@
         column-gap: 35px;
         row-gap: 15px;
         padding: 20px;
+        padding-bottom: 0px;
         &__point {
             text-align: center;
-        }  
+        }
     }
 }
 
-@include for-device-width('lg'){
-    .travel-section{
+@include for-device-width('lg') {
+    .travel-section {
         display: flex;
         position: relative;
-        &__img{
+        &__img {
             padding-top: 60px;
-            margin-left: -$desktop-padding;
+            margin-left: -$lg-padding;
             width: 160%;
-            img{
+            img {
                 width: 100%;
             }
         }
-        &__content{
+        &__content {
             padding-top: 22px;
             text-align: left;
-            &__h1{
+            &__h5 {
                 margin-top: 40px;
-                font-size: 28px;
-                font-weight: 700;
-                font-style: Bold;
-                line-height: 120%;
-                letter-spacing: 20%;
             }
-            &__h2{
+            &__h2 {
                 padding-top: 20px;
-                font-weight: 700;
-                font-style: Bold;
-                font-size: 55px;
-                line-height: 120%;
-                letter-spacing: 0%;
             }
-            &__para{
+            &__para {
                 padding-top: 45px;
-                font-weight: 400;
-                font-size: 22px;
-                line-height: 160%;
-                letter-spacing: 0%;
-                color: rgba(25, 24, 37, 0.5);
             }
         }
     }
@@ -171,32 +123,32 @@
             height: 190px;
             gap: 25px;
             text-align: center;
-            h3{
+            h4 {
                 font-size: 40px;
             }
-            p{
+            p {
                 font-size: 22px;
             }
-        }  
+        }
     }
-    .star-logo{
+    .star-logo {
         position: absolute;
         display: block;
         width: 100%;
         right: -88%;
         top: 50%;
-        img{
+        img {
             width: 320px;
         }
     }
-    .blur-yellow-bg{
+    .blur-yellow-bg {
         display: block;
         position: absolute;
         top: -15%;
         right: -35%;
         width: 500px;
         height: 500px;
-        background-color: rgba(250, 205, 73, 1);
+        background-color: #facd49;
         filter: blur(450px);
     }
 }

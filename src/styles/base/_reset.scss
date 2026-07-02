@@ -1,19 +1,19 @@
-*{
-    body{
-        overflow-x: hidden;
-    }
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    a{
+    a {
         text-decoration: none;
         color: black;
     }
-    li{
+    li {
         list-style-type: none;
     }
-    button{
+    button {
         border: none;
         background-color: transparent;
     }
+}
+body {
+    overflow-x: hidden;
 }

@@ -1,8 +1,6 @@
-$breakpoints: ( md: 431px, lg: 1024px );
-
 // --- Mixins ---
 @mixin for-device-width($width) {
-  @media screen and (min-width: map-get($breakpoints, $width)) {
-    @content;
-  }
-}   
+    @media screen and (min-width: map-get($breakpoints, $width)) {
+        @content;
+    }
+}
