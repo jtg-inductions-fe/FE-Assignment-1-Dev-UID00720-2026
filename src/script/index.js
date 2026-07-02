@@ -200,6 +200,7 @@ let dealsWon = [];
 let alreadySpin = 0; // to how much degree has the wheel already spined
 // Function for spinning the wheel and calculating the reward which the user will get.
 function spinWheel() {
+    displayDealWon.style.display = 'none';
     if (initialDealsLoaded) {
         initialDealsLoaded = false; // if the deals are already fresh in the wheel then no need to load the deals again
     } else {
@@ -209,7 +210,7 @@ function spinWheel() {
     wheel.style.transition = '';
     wheel.style.transform = `rotate(${alreadySpin}deg)`;
     alreadySpin += 360 * 8; // Base rotations to ensure it spins more
-    const randomDeg = Math.floor(Math.random() * 360);
+    const randomDeg = Math.floor(Math.random() * (350 - 10 + 1)) + 10;
 
     const finalRotation = alreadySpin + randomDeg;
     wheel.style.transition = 'transform 5s ease-out';
@@ -220,10 +221,12 @@ function spinWheel() {
     let dealWonLabel = document
         .querySelector(`.prize${quad}`)
         .querySelector('p').textContent; // Label of the deal that we won
+    let dealWon = null; // dealWON object
     dealsLoaded.forEach((dealObj) => {
         if (dealObj == null) {
             // No deal available
         } else if (dealObj.label === dealWonLabel) {
+            dealWon = dealObj;
             dealsWon.push(dealObj); // deal that user won on spinning the wheel push that to dealsWon array
         } else {
             dealsData.push(dealObj); // deals that have not won yet but still are loaded in wheel push them back to the deals data to unsure randomness
@@ -234,11 +237,40 @@ function spinWheel() {
     setTimeout(() => {
         spinBtn.disabled = false;
         displayDealWon.style.display = 'block';
+
+        // logic to show the details of the deal won to user
+        displayDealWon.querySelector(
+            '.deal-details__coupon-detail__name',
+        ).textContent = dealWon.label;
+        if (dealWon.validFor) {
+            displayDealWon.querySelector(
+                '.deal-details__coupon-detail__expired-in',
+            ).textContent = `Expires in ${dealWon.validFor}d`;
+        }
+        displayDealWon.querySelector(
+            '.deal-details__code-section__coupon-code',
+        ).textContent = dealWon.promoCode;
+
+        // logic to display the total number of deals won in "view all unlocked deals" section
+        document.querySelector('.view-unlock-deals__count').textContent =
+            dealsWon.length;
     }, 5000);
 }
 spinBtn.addEventListener('click', spinWheel);
 
 // function for coupon code component for coping the coupon code into the clipboard after clicking on copy button
+const handleClick = (e) => {
+    copyCouponFunction(e.currentTarget);
+};
+function copyCouponFunction(btn) {
+    // Target the immediate sibling element before the button
+    const codeElement = btn.previousElementSibling;
+
+    if (codeElement) {
+        const code = codeElement.innerText || codeElement.textContent;
+        navigator.clipboard.writeText(code);
+    }
+}
 function initCouponCopy() {
     // Select all copy buttons with the specific class
     const copyButtons = document.querySelectorAll(
@@ -246,15 +278,7 @@ function initCouponCopy() {
     );
 
     copyButtons.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            // Target the immediate sibling element before the button
-            const codeElement = btn.previousElementSibling;
-
-            if (codeElement) {
-                const code = codeElement.innerText || codeElement.textContent;
-                navigator.clipboard.writeText(code);
-            }
-        });
+        btn.addEventListener('click', handleClick);
     });
 }
 initCouponCopy();
