@@ -32,9 +32,14 @@
                     <div class="wheel spin-wheel">
                         <div class="wheel__triangle spin-wheel__triangle"></div>
                         <div class="wheel__circle spin-wheel__circle">
-                            <div class="spin-wheel__circle__spin-btn">Spin</div>
+                            <button class="spin-wheel__circle__spin-btn">
+                                Spin
+                            </button>
                             <div class="spin-wheel__circle__inner prize1">
                                 <p>prize one</p>
+                            </div>
+                            <div class="spin-wheel__circle__inner prize4">
+                                <p>prize four</p>
                             </div>
                             <div class="spin-wheel__circle__inner prize2">
                                 <p>prize two</p>
@@ -42,10 +47,43 @@
                             <div class="spin-wheel__circle__inner prize3">
                                 <p>prize three</p>
                             </div>
-                            <div class="spin-wheel__circle__inner prize4">
-                                <p>prize four</p>
+                        </div>
+                    </div>
+                    <div class="deal-won">
+                        <h6 class="deal-won__h6">You won!</h6>
+
+                        <!-- component for showing a deal details that user have won -->
+                        <div class="deal-details">
+                            <div class="deal-details__coupon-detail">
+                                <div class="deal-details__coupon-detail__name">
+                                    Spin wheel to win
+                                </div>
+                                <div
+                                    class="deal-details__coupon-detail__expired-in"
+                                >
+                                    Expires in 7d
+                                </div>
+                            </div>
+                            <div class="deal-details__code-section">
+                                <div
+                                    class="deal-details__code-section__coupon-code"
+                                >
+                                    Travlog-coupon
+                                </div>
+                                <img
+                                    class="deal-details__code-section__copy-btn"
+                                    src="public/assets/Copy.svg"
+                                    alt="copy coupon code"
+                                />
                             </div>
                         </div>
+                    </div>
+
+                    <div class="view-unlock-deals">
+                        <div class="view-unlock-deals__text">
+                            View All Unlocked Deals
+                        </div>
+                        <div class="view-unlock-deals__count">0</div>
                     </div>
                 </div>
             </div>

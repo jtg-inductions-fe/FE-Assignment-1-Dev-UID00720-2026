@@ -88,14 +88,14 @@ function openFooterLinks() {
 }
 openFooterLinks();
 
+// --------------------------------------------------------------logics for spin wheel modal-------------------------------------------------------------
 const specialDealsOpenBtn = document.querySelector('.special-deals-btn');
 const specialDealsModal = document.querySelector('.deals-modal');
 const specialDealsCloseBtn = document.querySelector(
     '.deals-modal__special-deals__close-btn',
 );
-
-// logics for spin wheel modal
 const spinBtn = document.querySelector('.spin-wheel__circle__spin-btn');
+
 specialDealsOpenBtn.addEventListener('click', () => {
     setMenuOpen(false);
     document.body.style.overflow = 'hidden';
@@ -106,14 +106,155 @@ specialDealsCloseBtn.addEventListener('click', () => {
     document.body.style.overflow = '';
     specialDealsModal.style.display = 'none';
 });
-let alreadySpin = 0;
-spinBtn.addEventListener('click', () => {
+
+let dealsData = [
+    {
+        label: '20% Off Flights',
+        promoCode: 'FLY20-X8J2',
+        validFor: 13,
+    },
+    {
+        label: 'Free Hotel Night',
+        promoCode: 'HOTEL-9A4B',
+        validFor: null,
+    },
+    {
+        label: '10% Off Packages',
+        promoCode: 'PKG10-QW12',
+        validFor: 4,
+    },
+    {
+        label: 'VIP Lounge',
+        promoCode: 'VIP-LMN9',
+        validFor: 29,
+    },
+    {
+        label: 'Free Breakfast',
+        promoCode: 'BFAST-5541',
+        validFor: 1,
+    },
+    {
+        label: 'Free Airport Cab',
+        promoCode: 'CAB-XYZ9',
+        validFor: 6,
+    },
+    {
+        label: '15% Off Car Rentals',
+        promoCode: 'CAR15-JKL3',
+        validFor: 14,
+    },
+    {
+        label: 'Buy 1 Get 1 City Tour',
+        promoCode: 'BOGO-TR44',
+        validFor: 10,
+    },
+    {
+        label: 'Complimentary Spa Session',
+        promoCode: 'SPA-ZXC8',
+        validFor: 21,
+    },
+    {
+        label: 'Priority Boarding',
+        promoCode: 'PRI-BOARD1',
+        validFor: null,
+    },
+];
+const displayDealWon = document.querySelector('.deal-won');
+/**
+ * Selects a random deal from the dealsData array and removes it.
+ * @returns {object|null} The randomly selected deal object, or null if the array is empty.
+ */
+function getRandomDeal() {
+    let size = dealsData.length;
+    if (size == 0) return null;
+    let pickedInd = Math.floor(Math.random() * size);
+    let deal = dealsData[pickedInd];
+    dealsData.splice(pickedInd, 1); // delete object at pickedInd
+    return deal;
+}
+
+/**
+ * loads 4 random deals into the wheel , if there is no deal available it loads "No deal available"
+ * @returns {Array of objects} array of deals that are randomly selected
+ */
+function loadDealsInWheel() {
+    let dealsLoaded = [];
+    for (let i = 1; i <= 4; i++) {
+        let dealObj = getRandomDeal();
+        dealsLoaded.push(dealObj);
+        let wheelPrizeQuad = document
+            .querySelector(`.prize${i}`)
+            .querySelector('p');
+        wheelPrizeQuad.textContent = dealObj
+            ? dealObj.label
+            : 'No deal available';
+    }
+    return dealsLoaded;
+}
+
+//this is the initial loaded deals when the component render
+let dealsLoaded = loadDealsInWheel(); // deals that are already loaded in the wheel and removed from the dealsData
+let initialDealsLoaded = true; // this will be become false after the wheel has spinned one time
+let dealsWon = [];
+
+let alreadySpin = 0; // to how much degree has the wheel already spined
+// Function for spinning the wheel and calculating the reward which the user will get.
+function spinWheel() {
+    if (initialDealsLoaded) {
+        initialDealsLoaded = false; // if the deals are already fresh in the wheel then no need to load the deals again
+    } else {
+        dealsLoaded = loadDealsInWheel(); // if the wheel spins again this will load the fresh deals in the wheel again
+    }
     const wheel = document.querySelector('.spin-wheel__circle');
     wheel.style.transition = '';
     wheel.style.transform = `rotate(${alreadySpin}deg)`;
     alreadySpin += 360 * 8; // Base rotations to ensure it spins more
     const randomDeg = Math.floor(Math.random() * 360);
+
     const finalRotation = alreadySpin + randomDeg;
     wheel.style.transition = 'transform 5s ease-out';
     wheel.style.transform = `rotate(${finalRotation}deg)`;
-});
+    spinBtn.disabled = true;
+
+    const quad = Math.floor((finalRotation % 360) / 90) + 1;
+    let dealWonLabel = document
+        .querySelector(`.prize${quad}`)
+        .querySelector('p').textContent; // Label of the deal that we won
+    dealsLoaded.forEach((dealObj) => {
+        if (dealObj == null) {
+            // No deal available
+        } else if (dealObj.label === dealWonLabel) {
+            dealsWon.push(dealObj); // deal that user won on spinning the wheel push that to dealsWon array
+        } else {
+            dealsData.push(dealObj); // deals that have not won yet but still are loaded in wheel push them back to the deals data to unsure randomness
+        }
+    });
+    dealsLoaded = []; // empty the deals that are loaded in wheel
+
+    setTimeout(() => {
+        spinBtn.disabled = false;
+        displayDealWon.style.display = 'block';
+    }, 5000);
+}
+spinBtn.addEventListener('click', spinWheel);
+
+// function for coupon code component for coping the coupon code into the clipboard after clicking on copy button
+function initCouponCopy() {
+    // Select all copy buttons with the specific class
+    const copyButtons = document.querySelectorAll(
+        '.deal-details__code-section__copy-btn',
+    );
+
+    copyButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            // Target the immediate sibling element before the button
+            const codeElement = btn.previousElementSibling;
+
+            if (codeElement) {
+                const code = codeElement.innerText || codeElement.textContent;
+                navigator.clipboard.writeText(code);
+            }
+        });
+    });
+}
+initCouponCopy();
