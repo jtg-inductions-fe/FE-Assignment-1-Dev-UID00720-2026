@@ -243,6 +243,13 @@
         }
     }
 }
+.deal-expired {
+    background: none;
+    background-color: rgba(238, 238, 238, 1);
+    .deal-details__coupon-detail__expired-in {
+        color: #999999;
+    }
+}
 
 .deals-navigation-btn {
     display: flex;
