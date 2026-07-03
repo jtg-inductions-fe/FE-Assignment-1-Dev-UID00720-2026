@@ -19,7 +19,7 @@
 }
 header {
     position: relative;
-    padding: rem(35) 0;
+    padding: 35px 0;
     .nav-menu__mob-nav-only {
         display: block;
     }
@@ -57,7 +57,7 @@ header {
         margin: auto;
         width: 100%;
         li {
-            margin: rem(5);
+            margin: 5px;
             text-align: center;
             cursor: pointer;
             a {
@@ -84,7 +84,7 @@ header {
     header {
         display: flex;
         justify-content: space-between;
-        padding: rem(32) 0;
+        padding: 32px 0;
         .nav-menu__mob-nav-only {
             display: none;
         }
@@ -102,7 +102,7 @@ header {
             min-width: rem(225);
             button {
                 font-size: rem(14);
-                padding: rem(17) rem(30);
+                padding: 17px 30px;
             }
         }
     }
@@ -119,7 +119,7 @@ header {
     }
     header {
         width: 100%;
-        padding: rem(115) 0;
+        padding: 115px 0;
         height: rem(112);
         align-items: center;
         display: flex;
@@ -154,7 +154,7 @@ header {
                     width: 100%;
                     li {
                         a {
-                            color: grey;
+                            color: $nav-links-color;
                         }
                     }
                 }
@@ -165,7 +165,7 @@ header {
             min-width: rem(300);
             button {
                 font-size: rem(16);
-                padding: rem(22) rem(46);
+                padding: 22px 46px;
             }
         }
     }

@@ -1,9 +1,9 @@
 .footer {
-    padding-top: rem(85);
-    padding-left: rem(10);
+    padding-top: 85px;
+    padding-left: 10px;
     &__desc {
         &__logo {
-            padding: rem(15) 0;
+            padding: 15px 0;
             font-size: rem(24);
             font-weight: 900;
             line-height: rem(40);
@@ -15,20 +15,20 @@
             }
         }
         &__p {
-            padding: rem(10) 0;
+            padding: 10px 0;
         }
         &__socials {
             margin-top: rem(15);
-            padding: rem(5);
+            padding: 5px;
             display: flex;
             gap: rem(30);
         }
     }
     &__navs {
         .footer-links-section {
-            margin: rem(5);
-            margin-top: rem(75);
-            margin-bottom: rem(50);
+            margin: 5px;
+            margin-top: 75px;
+            margin-bottom: 50px;
             &__heading {
                 display: flex;
                 justify-content: space-between;
@@ -43,16 +43,16 @@
                 }
             }
             &__nav-links {
-                margin-top: rem(20);
+                margin-top: 20px;
                 display: none;
                 ul {
                     li {
-                        margin: rem(10);
+                        margin: 10px;
                         a {
-                            color: #191825bf;
+                            color: $nav-links-color;
                         }
                         address {
-                            color: #191825bf;
+                            color: $nav-links-color;
                         }
                     }
                 }
@@ -70,7 +70,7 @@
 @include for-device-width('md') {
     .footer {
         position: relative;
-        padding-top: rem(165);
+        padding-top: 165px;
         padding-left: 0;
         &__desc {
             &__logo {
@@ -85,7 +85,7 @@
                 font-size: rem(23);
             }
             &__socials {
-                margin-top: rem(10);
+                margin-top: 10px;
                 gap: rem(30);
                 a {
                     img {
@@ -100,7 +100,7 @@
             gap: 0;
             margin-left: 0;
             .footer-links-section {
-                margin-top: rem(55);
+                margin-top: 55px;
                 &__heading {
                     .links-heading {
                         font-size: rem(22);
@@ -110,7 +110,7 @@
                     }
                 }
                 &__nav-links {
-                    margin-top: rem(35);
+                    margin-top: 35px;
                     display: flex;
                     ul {
                         li {
@@ -127,9 +127,9 @@
     .footer-decorator-img {
         display: inline;
         position: absolute;
-        right: rem(-50);
-        top: rem(320);
-        width: rem(120);
+        right: -50px;
+        top: 320px;
+        width: 120px;
     }
 }
 
@@ -137,7 +137,7 @@
     .footer {
         position: relative;
         display: flex;
-        padding-top: rem(380);
+        padding-top: 380px;
         &__desc {
             max-width: rem(730);
             &__logo {
