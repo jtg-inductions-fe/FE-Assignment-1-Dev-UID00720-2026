@@ -207,7 +207,7 @@ function renderUnlockedDeals(dealsWon) {
                                 </div>
                                 <img
                                     class="deal-details__code-section__copy-btn"
-                                    src="public/assets/Copy.svg"
+                                    src="public/assets/copy.svg"
                                     alt="copy coupon code"
                                 />
                             </div>
