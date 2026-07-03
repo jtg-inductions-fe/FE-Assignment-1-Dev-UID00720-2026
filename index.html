@@ -12,18 +12,16 @@
     </head>
     <body>
         <div class="deals-modal">
-            <div class="deals-modal__special-deals">
-                <button class="deals-modal__special-deals__close-btn">
-                    <img src="public/assets/X.svg" alt="close modal button" />
+            <div class="deals special-deals">
+                <button class="deals__close-btn">
+                    <img src="public/assets/x.svg" alt="close modal button" />
                 </button>
-                <h6 class="deals-modal__special-deals__h6">
-                    <img src="public/assets/Gift.svg" alt="gift logo" /> SPECIAL
-                    DEALS
+                <h6 class="deals__h6">
+                    <img src="public/assets/Gift.svg" alt="gift logo" />
+                    SPECIAL DEALS
                 </h6>
-                <h4 class="deals-modal__special-deals__h4">Spin & Win!</h4>
-                <p class="deals-modal__special-deals__p">
-                    Tap the center of the wheel to spin
-                </p>
+                <h4 class="deals__h4">Spin & Win!</h4>
+                <p class="deals__p">Tap the center of the wheel to spin</p>
                 <div class="wheel-section">
                     <div class="wheel loading-wheel">
                         <div class="wheel__triangle"></div>
@@ -79,12 +77,27 @@
                         </div>
                     </div>
 
-                    <div class="view-unlock-deals">
-                        <div class="view-unlock-deals__text">
+                    <div class="deals-navigation-btn view-unlock-deals">
+                        <div class="deals-navigation-btn__text">
                             View All Unlocked Deals
                         </div>
-                        <div class="view-unlock-deals__count">0</div>
+                        <div class="deals-navigation-btn__count">0</div>
                     </div>
+                </div>
+            </div>
+            <div class="deals unlocked-deals">
+                <button class="deals__close-btn">
+                    <img src="public/assets/x.svg" alt="close modal button" />
+                </button>
+                <h6 class="deals__h6">
+                    <img src="public/assets/Gift.svg" alt="gift logo" />
+                    SPECIAL DEALS
+                </h6>
+                <h4 class="deals__h4">Unlocked Deals</h4>
+                <p class="deals__p">All the deals you've unlocked yet!</p>
+                <div class="unlocked-deals__display-section"></div>
+                <div class="deals-navigation-btn back-to-special-deals-btn">
+                    <div class="deals-navigation-btn__text">Go Back</div>
                 </div>
             </div>
         </div>
