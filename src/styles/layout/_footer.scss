@@ -15,7 +15,7 @@
             }
         }
         &__p {
-            padding: 10px 0;
+            margin: 10px 0 25px 0;
         }
         &__socials {
             margin-top: rem(15);
@@ -144,7 +144,7 @@
     .footer {
         position: relative;
         display: flex;
-        padding-top: 370px;
+        padding-top: 365px;
         max-width: 1500px;
         margin: auto;
         &__desc {
