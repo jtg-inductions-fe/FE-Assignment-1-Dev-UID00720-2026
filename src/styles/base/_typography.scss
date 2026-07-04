@@ -20,6 +20,10 @@ body {
         font-weight: 400;
         font-size: rem(15);
     }
+    button:hover {
+        transform: translateY(-10%);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
     @include for-device-width('md') {
         h5 {
             font-size: rem(23);

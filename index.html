@@ -9,14 +9,19 @@
             href="https://cdn.jsdelivr.net/npm/@vetixy/circular-std@1.0.0/dist/index.min.css"
             rel="stylesheet"
         />
+        <link rel="icon" href="/assets/favicon.ico" type="image" />
+        <script
+            src="https://kit.fontawesome.com/de773bc714.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
         <div class="container">
             <header>
                 <div class="header-section">
-                    <div class="header-section__icon">
+                    <a href="#" class="header-section__icon">
                         <img src="/assets/app-logo.svg" alt="Travlog-logo" />
-                    </div>
+                    </a>
 
                     <div class="header-section__icon" id="hamburger">
                         <button
@@ -144,8 +149,10 @@
                         </p>
 
                         <div class="hero-section__content-section__btns">
-                            <button class="primary-btn">Get Started</button>
-                            <button class="secondary-btn">
+                            <button type="button" class="primary-btn">
+                                Get Started
+                            </button>
+                            <button type="button" class="secondary-btn">
                                 <img
                                     src="/assets/watch-demo.png"
                                     alt="watch demo logo"
@@ -169,18 +176,18 @@
                             width="130px"
                         />
                         <source
-                            media="(width <= 1023px)"
+                            media="(width <= 1024px)"
                             srcset="/assets/tripadvisor.svg"
                             width="210px"
                         />
                         <source
-                            media="(width >= 1024px)"
+                            media="(width >= 1025px)"
                             srcset="/assets/tripadvisor.svg"
                             width="280px"
                         />
                         <img
                             src="/assets/tripadvisor.svg"
-                            alt="Chris standing up holding his daughter Elva"
+                            alt="tripadvisor logo"
                         />
                     </picture>
                     <picture>
@@ -190,19 +197,16 @@
                             width="70px"
                         />
                         <source
-                            media="(width <= 1023px)"
+                            media="(width <= 1024px)"
                             srcset="/assets/expedia.svg"
                             width="115px"
                         />
                         <source
-                            media="(width >= 1024px)"
+                            media="(width >= 1025px)"
                             srcset="/assets/expedia.svg"
                             width="150px"
                         />
-                        <img
-                            src="/assets/expedia.svg"
-                            alt="Chris standing up holding his daughter Elva"
-                        />
+                        <img src="/assets/expedia.svg" alt="expedia logo" />
                     </picture>
                     <picture>
                         <source
@@ -211,18 +215,18 @@
                             width="120px"
                         />
                         <source
-                            media="(width <= 1023px)"
+                            media="(width <= 1024px)"
                             srcset="/assets/booking.com.svg"
                             width="190px"
                         />
                         <source
-                            media="(width >= 1024px)"
+                            media="(width >= 1025px)"
                             srcset="/assets/booking.com.svg"
                             width="250px"
                         />
                         <img
                             src="/assets/booking.com.svg"
-                            alt="Chris standing up holding his daughter Elva"
+                            alt="booking.com logo"
                         />
                     </picture>
                     <picture>
@@ -232,19 +236,16 @@
                             width="65px"
                         />
                         <source
-                            media="(width <= 1023px)"
+                            media="(width <= 1024px)"
                             srcset="/assets/airbnb.svg"
                             width="100px"
                         />
                         <source
-                            media="(width >= 1024px)"
+                            media="(width >= 1025px)"
                             srcset="/assets/airbnb.svg"
                             width="130px"
                         />
-                        <img
-                            src="/assets/airbnb.svg"
-                            alt="Chris standing up holding his daughter Elva"
-                        />
+                        <img src="/assets/airbnb.svg" alt="airbnb logo" />
                     </picture>
                     <picture>
                         <source
@@ -253,19 +254,16 @@
                             width="110px"
                         />
                         <source
-                            media="(width <= 1023px)"
+                            media="(width <= 1024px)"
                             srcset="/assets/orbitz.svg"
                             width="180px"
                         />
                         <source
-                            media="(width >= 1024px)"
+                            media="(width >= 1025px)"
                             srcset="/assets/orbitz.svg"
-                            width="240px"
+                            width="230px"
                         />
-                        <img
-                            src="/assets/orbitz.svg"
-                            alt="Chris standing up holding his daughter Elva"
-                        />
+                        <img src="/assets/orbitz.svg" alt="orbitz logo" />
                     </picture>
                 </article>
 
@@ -336,17 +334,16 @@
                     <section class="splide" aria-labelledby="carousel-heading">
                         <div class="splide__arrows">
                             <button
+                                type="button"
                                 class="splide__arrow splide__arrow--prev secondary-btn"
                             >
-                                <img
-                                    src="/assets/left-arrow.svg"
-                                    alt="left arrow"
-                                />
+                                <i class="fa-solid fa-arrow-left"></i>
                             </button>
                             <button
-                                class="splide__arrow splide__arrow--next primary-btn"
+                                type="button"
+                                class="splide__arrow splide__arrow--next secondary-btn"
                             >
-                                <img src="/assets/right-arrow.svg" alt="" />
+                                <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
                         <ul class="splide__pagination"></ul>
@@ -499,11 +496,17 @@
                     <div class="footer-links-section">
                         <div class="footer-links-section__heading">
                             <div class="links-heading">Company</div>
-                            <img
-                                class="links-arrow company-down-arrow"
-                                src="/assets/arrow-circle-down.svg"
-                                alt="down arrow"
-                            />
+                            <button
+                                class="links-arrow"
+                                type="button"
+                                aria-label="open company links"
+                            >
+                                <img
+                                    class="company-down-arrow"
+                                    src="/assets/arrow-circle-down.svg"
+                                    alt="down arrow"
+                                />
+                            </button>
                         </div>
                         <div
                             class="footer-links-section__nav-links company-nav-links"
@@ -518,11 +521,17 @@
                     <div class="footer-links-section">
                         <div class="footer-links-section__heading">
                             <div class="links-heading">Contact Us</div>
-                            <img
-                                class="links-arrow contact-down-arrow"
-                                src="/assets/arrow-circle-down.svg"
-                                alt="down arrow"
-                            />
+                            <button
+                                class="links-arrow"
+                                type="button"
+                                aria-label="open contact links"
+                            >
+                                <img
+                                    class="contact-down-arrow"
+                                    src="/assets/arrow-circle-down.svg"
+                                    alt="down arrow"
+                                />
+                            </button>
                         </div>
                         <div
                             class="footer-links-section__nav-links contact-nav-links"
@@ -538,11 +547,17 @@
                     <div class="footer-links-section">
                         <div class="footer-links-section__heading">
                             <div class="links-heading">Meet Us</div>
-                            <img
-                                class="links-arrow meet-down-arrow"
-                                src="/assets/arrow-circle-down.svg"
-                                alt="down arrow"
-                            />
+                            <button
+                                class="links-arrow"
+                                type="button"
+                                aria-label="open meet up links"
+                            >
+                                <img
+                                    class="meet-down-arrow"
+                                    src="/assets/arrow-circle-down.svg"
+                                    alt="down arrow"
+                                />
+                            </button>
                         </div>
                         <div
                             class="footer-links-section__nav-links meet-nav-links"

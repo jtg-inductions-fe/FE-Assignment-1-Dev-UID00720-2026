@@ -238,14 +238,13 @@
     .hero-section {
         display: flex;
         flex-direction: row-reverse;
-        padding-top: 0px;
+        padding-top: 15px;
         min-width: 865px;
         &__img-section {
             margin: auto;
             margin-top: 0px;
             margin-left: 45px;
-            width: 65%;
-            min-width: 500px;
+            max-width: 1050px;
             &__location-icon {
                 position: absolute;
                 top: 49%;
@@ -303,14 +302,16 @@
                 width: rem(500);
                 font: bold;
                 line-height: 120%;
-                font-size: 5.5rem;
+                font-size: rem(88);
             }
             &__para {
-                margin-top: 2%;
+                margin-top: 20px;
+                margin-left: 0;
                 text-align: left;
                 max-width: rem(450);
             }
             &__btns {
+                margin-left: 0;
                 max-width: rem(450);
                 display: flex;
                 justify-content: left;
@@ -345,7 +346,7 @@
         }
     }
     .websites-logo {
-        margin-top: 100px;
+        margin-top: 110px;
         display: flex;
         width: 100%;
         justify-content: space-between;

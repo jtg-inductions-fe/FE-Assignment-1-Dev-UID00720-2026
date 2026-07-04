@@ -38,8 +38,12 @@
                     font-weight: 700;
                     line-height: 120%;
                 }
-                img {
+                button {
                     cursor: pointer;
+                }
+                button:hover {
+                    transform: none;
+                    box-shadow: none;
                 }
             }
             &__nav-links {
@@ -50,6 +54,9 @@
                         margin: 10px;
                         a {
                             color: $nav-links-color;
+                        }
+                        a:hover {
+                            color: black;
                         }
                         address {
                             color: $nav-links-color;
@@ -137,11 +144,13 @@
     .footer {
         position: relative;
         display: flex;
-        padding-top: 380px;
+        padding-top: 370px;
+        max-width: 1500px;
+        margin: auto;
         &__desc {
             max-width: rem(730);
             &__logo {
-                padding: 20px 0px 15px 0px;
+                padding: 20px 0;
                 font-size: 30px;
                 gap: 15px;
                 img {
@@ -181,7 +190,7 @@
                     display: flex;
                     ul {
                         li {
-                            margin: 0px;
+                            margin: 0;
                             margin-bottom: 50px;
                             font-size: 24px;
                             line-height: 120%;
