@@ -12,6 +12,14 @@ body {
         font-size: rem(30);
         line-height: 120%;
         letter-spacing: 0%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        line-clamp: 3;
+    }
+    h2:hover {
+        display: block;
     }
     p {
         line-height: 160%;
@@ -19,6 +27,18 @@ body {
         color: $para-color;
         font-weight: 400;
         font-size: rem(15);
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        line-clamp: 3;
+    }
+    p:hover {
+        display: block;
+    }
+    button:hover {
+        transform: translateY(-10%);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
     @include for-device-width('md') {
         h5 {

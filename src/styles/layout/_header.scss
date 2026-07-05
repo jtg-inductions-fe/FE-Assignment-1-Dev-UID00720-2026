@@ -33,8 +33,13 @@ header {
         button {
             cursor: pointer;
         }
+        button:hover {
+            box-shadow: none;
+            transform: none;
+        }
     }
     .header-section__icon {
+        z-index: 2;
         img {
             width: rem(40);
         }
@@ -155,6 +160,10 @@ header {
                     li {
                         a {
                             color: $nav-links-color;
+                            height: auto;
+                        }
+                        a:hover {
+                            color: black;
                         }
                     }
                 }

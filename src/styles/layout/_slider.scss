@@ -27,6 +27,15 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                svg {
+                    font-size: 12px;
+                }
+            }
+            button:hover {
+                background-color: $primary-color;
+                svg {
+                    color: white;
+                }
             }
         }
         &__pagination {
@@ -142,8 +151,8 @@
                     padding: 0px;
                     width: 100px;
                     height: 100px;
-                    img {
-                        width: 20px;
+                    svg {
+                        font-size: 16px;
                     }
                 }
             }
@@ -198,7 +207,7 @@
         background-size: cover;
         background-position: center 32%;
         margin: -$lg-padding;
-        margin-top: 130px;
+        margin-top: 120px;
         &__h2 {
             padding: 22px;
         }
@@ -218,8 +227,8 @@
                     padding: 0px;
                     width: 125px;
                     height: 125px;
-                    img {
-                        width: 28px;
+                    svg {
+                        font-size: 22px;
                     }
                 }
             }

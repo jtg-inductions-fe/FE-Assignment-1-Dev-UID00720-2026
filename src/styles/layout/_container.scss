@@ -29,6 +29,8 @@
 
 @include for-device-width('lg') {
     .container {
+        max-width: 1900px;
+        margin: auto;
         padding: 0 $lg-padding;
         .blur-orange-bg {
             width: rem(600);
