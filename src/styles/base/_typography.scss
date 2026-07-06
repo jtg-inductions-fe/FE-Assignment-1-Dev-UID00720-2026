@@ -21,12 +21,15 @@ body {
     h2:hover {
         display: block;
     }
+    h6 {
+        font-size: rem(12);
+    }
     p {
         line-height: 160%;
         letter-spacing: 0%;
         color: $para-color;
         font-weight: 400;
-        font-size: rem(15);
+        font-size: rem(16);
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
@@ -66,7 +69,6 @@ body {
             font-size: rem(55);
         }
         p {
-            font-size: rem(25);
             font-weight: 400;
         }
     }

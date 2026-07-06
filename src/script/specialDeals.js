@@ -1,6 +1,5 @@
 import { setMenuOpen } from './utils';
-const apiUrl =
-    'https://gist.githubusercontent.com/ameer-wajid-ali/1f29ebee4295cede36f8d74b45e576df/raw/122966c9a123861249f173911d8d93a76dc06d7a/';
+import { apiUrl } from './constants';
 let apiCalled = false;
 let dealsData = [];
 let dealsWon = [];
@@ -250,6 +249,18 @@ function addDays(date, days) {
     result.setDate(result.getDate() + parseInt(days));
     return result;
 }
+/**
+ * valid if num is number or not
+ * @function validateNumber
+ * @param {any} num
+ * @returns {boolean} return true if num if number else return false
+ */
+function validateNumber(num) {
+    if (num == '' || num == null || num == undefined || isNaN(num)) {
+        return false;
+    }
+    return true;
+}
 
 /**  Function for spinning the wheel and calculating the reward which the user will get, and push that reward into dealsWon array
  * @return {null}
@@ -267,7 +278,13 @@ function spinWheel() {
     alreadySpin += 360 * 8; // Base rotations to ensure it spins more
     const randomDeg = Math.floor(Math.random() * 360);
 
-    const finalRotation = alreadySpin + randomDeg;
+    let finalRotation = alreadySpin + randomDeg;
+
+    // to avoid stopping the wheel on edge
+    if (finalRotation % 90 === 0) {
+        finalRotation += 10;
+        alreadySpin += 10;
+    }
     wheel.style.transition = 'transform 5s ease-out';
     wheel.style.transform = `rotate(${finalRotation}deg)`;
     spinBtn.disabled = true;
@@ -281,12 +298,7 @@ function spinWheel() {
         } else if (index === wonIndex) {
             dealWon = structuredClone(dealObj);
             dealWon.validFrom = new Date();
-            if (
-                dealWon.validFor == '' ||
-                dealWon.validFor == null ||
-                dealWon.validFor == undefined ||
-                isNaN(dealWon.validFor)
-            ) {
+            if (!validateNumber(dealWon.validFor)) {
                 dealWon.validFor = '7';
             }
             dealsWon.push(dealWon); // deal that user won on spinning the wheel push that to dealsWon array
