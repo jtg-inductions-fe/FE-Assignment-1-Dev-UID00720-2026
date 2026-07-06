@@ -36,9 +36,16 @@ body {
     p:hover {
         display: block;
     }
+    button {
+        transition: box-shadow 0.5s ease;
+        img {
+            display: block;
+            object-fit: contain;
+        }
+    }
     button:hover {
         transform: translateY(-10%);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 16px $shadow-color;
     }
     @include for-device-width('md') {
         h5 {

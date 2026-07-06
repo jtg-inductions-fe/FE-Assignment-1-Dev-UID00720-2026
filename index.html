@@ -18,15 +18,15 @@
     <body>
         <div class="deals-modal">
             <div class="deals special-deals">
-                <button class="deals__close-btn">
+                <button class="deals__close-btn" type="button">
                     <img src="/assets/x.svg" alt="close modal button" />
                 </button>
-                <h6 class="deals__h6">
+                <h6 class="deals__tittle">
                     <img src="/assets/gift.svg" alt="gift logo" />
                     SPECIAL DEALS
                 </h6>
-                <h4 class="deals__h4">Spin & Win!</h4>
-                <p class="deals__p">Tap the center of the wheel to spin</p>
+                <h4 class="deals__subtittle">Spin & Win!</h4>
+                <p class="deals__para">Tap the center of the wheel to spin</p>
                 <div class="wheel-section">
                     <div class="wheel loading-wheel">
                         <div class="wheel__triangle"></div>
@@ -35,7 +35,10 @@
                     <div class="wheel spin-wheel">
                         <div class="wheel__triangle spin-wheel__triangle"></div>
                         <div class="wheel__circle spin-wheel__circle">
-                            <button class="spin-wheel__circle__spin-btn">
+                            <button
+                                class="spin-wheel__circle__spin-btn"
+                                type="button"
+                            >
                                 Spin
                             </button>
                             <div class="spin-wheel__circle__inner prize1">
@@ -73,37 +76,45 @@
                                 >
                                     Travlog-coupon
                                 </div>
-                                <img
+                                <button
                                     class="deal-details__code-section__copy-btn"
-                                    src="/assets/copy.svg"
-                                    alt="copy coupon code"
-                                />
+                                    type="button"
+                                    aria-label="Copy coupon code"
+                                >
+                                    <img src="/assets/copy.svg" alt="" />
+                                </button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="deals-navigation-btn view-unlock-deals">
+                    <button
+                        type="button"
+                        class="deals-navigation-btn view-unlock-deals"
+                    >
                         <div class="deals-navigation-btn__text">
                             View All Unlocked Deals
                         </div>
                         <div class="deals-navigation-btn__count">0</div>
-                    </div>
+                    </button>
                 </div>
             </div>
             <div class="deals unlocked-deals">
-                <button class="deals__close-btn">
+                <button class="deals__close-btn" type="button">
                     <img src="/assets/x.svg" alt="close modal button" />
                 </button>
-                <h6 class="deals__h6">
+                <h6 class="deals__tittle">
                     <img src="/assets/gift.svg" alt="gift logo" />
                     SPECIAL DEALS
                 </h6>
-                <h4 class="deals__h4">Unlocked Deals</h4>
-                <p class="deals__p">All the deals you've unlocked yet!</p>
+                <h4 class="deals__subtittle">Unlocked Deals</h4>
+                <p class="deals__para">All the deals you've unlocked yet!</p>
                 <div class="unlocked-deals__display-section"></div>
-                <div class="deals-navigation-btn back-to-special-deals-btn">
+                <button
+                    type="button"
+                    class="deals-navigation-btn back-to-special-deals-btn"
+                >
                     <div class="deals-navigation-btn__text">Go Back</div>
-                </div>
+                </button>
             </div>
         </div>
         <div class="container">
@@ -681,5 +692,6 @@
         </div>
         <script type="module" src="./src/script/splide.js"></script>
         <script type="module" src="./src/script/index.js"></script>
+        <script type="module" src="./src/script/specialDeals.js"></script>
     </body>
 </html>
