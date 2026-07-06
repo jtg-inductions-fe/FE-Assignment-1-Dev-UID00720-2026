@@ -5,7 +5,7 @@ let apiCalled = false;
 let dealsData = [];
 let dealsWon = [];
 let dealsLoaded = [];
-let initialDealsLoaded = true; // this will be become false after the wheel has spinned one time
+let initialDealsLoaded = false; // this will be become false after the wheel has spinned one time
 let alreadySpin = 0; // to how much degree has the wheel already spined
 
 const displayDealWon = document.querySelector('.deal-won');
@@ -23,6 +23,10 @@ const backToSpecialDealsBtn = document.querySelector(
 const displayDealsSection = document.querySelector(
     '.unlocked-deals__display-section',
 );
+const specialDealsCloseBtn = document.querySelector('.special-deals-close-btn');
+const unlockedDealsCloseBtn = document.querySelector(
+    '.unlocked-deals-close-btn',
+);
 
 specialDealsOpenBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -32,15 +36,18 @@ dealsCloseBtns.forEach((dealsCloseBtn) => {
     dealsCloseBtn.addEventListener('click', () => {
         document.body.style.overflow = '';
         dealsModal.style.display = 'none';
+        unloadDeals();
     });
 });
 viewUnlockDealsBtn.addEventListener('click', () => {
     specialDealsSection.style.display = 'none';
     unlockedDealsSection.style.display = 'block';
+    unlockedDealsCloseBtn.focus();
 });
 backToSpecialDealsBtn.addEventListener('click', () => {
     unlockedDealsSection.style.display = 'none';
     specialDealsSection.style.display = 'block';
+    specialDealsCloseBtn.focus();
 });
 
 /**
@@ -91,6 +98,9 @@ async function init() {
     setMenuOpen(false);
     document.body.style.overflow = 'hidden';
     dealsModal.style.display = 'block';
+    specialDealsSection.style.display !== 'none'
+        ? specialDealsCloseBtn.focus()
+        : unlockedDealsCloseBtn.focus();
 
     if (!apiCalled) {
         await getDealsData();
@@ -98,10 +108,29 @@ async function init() {
         document.querySelector('.loading-wheel').style.display = 'none';
         document.querySelector('.spin-wheel').style.display = 'block';
         document.querySelector('.view-unlock-deals').style.display = 'flex';
-
-        dealsLoaded = loadDealsInWheel();
         spinBtn.addEventListener('click', spinWheel);
+    } else {
+        displayDealWon.style.visibility = 'hidden';
+        const wheel = document.querySelector('.spin-wheel__circle');
+        const rotation = Math.floor(alreadySpin / 360);
+        alreadySpin = (rotation + 1) * 360;
+        wheel.style.transition = 'none';
+        wheel.style.transform = `rotate(${alreadySpin}deg)`;
     }
+    dealsLoaded = loadDealsInWheel();
+    initialDealsLoaded = true;
+}
+
+/**
+ * it unloads deals from dealsLoaded back to dealsData
+ * @returns {null}
+ */
+function unloadDeals() {
+    for (let deals of dealsLoaded) {
+        if (deals == null) continue;
+        dealsData.push(deals);
+    }
+    dealsLoaded = [];
 }
 
 /**
@@ -222,9 +251,11 @@ function addDays(date, days) {
     return result;
 }
 
-// Function for spinning the wheel and calculating the reward which the user will get, and push that reward into dealsWon array
+/**  Function for spinning the wheel and calculating the reward which the user will get, and push that reward into dealsWon array
+ * @return {null}
+ */
 function spinWheel() {
-    displayDealWon.style.display = 'none';
+    displayDealWon.style.visibility = 'hidden';
     if (initialDealsLoaded) {
         initialDealsLoaded = false; // if the deals are already fresh in the wheel then no need to load the deals again
     } else {
@@ -269,7 +300,7 @@ function spinWheel() {
         spinBtn.disabled = false;
         // logic to show the details of the deal won to user
         if (dealWon) {
-            displayDealWon.style.display = 'block';
+            displayDealWon.style.visibility = 'visible';
             displayDealWon.querySelector(
                 '.deal-details__coupon-detail__name',
             ).textContent = dealWon.label;
@@ -320,3 +351,53 @@ function copyCoupon(displaySection) {
 copyCoupon(displayDealsSection);
 // To copy coupon code for spin and win section
 copyCoupon(dealDetails);
+
+/**
+ * Traps the focus control inside the section
+ * @function trapControl
+ * @param {object} event
+ * @param {HTMLElement} section - section in which the focus should be trapped
+ * @param {HTMLElement} first - first button in the section
+ * @param {HTMLElement} last  - last button in the section
+ * @returns {void}
+ */
+function trapControl(event, section, first, last) {
+    if (section.style.display !== 'none') {
+        const current = document.activeElement;
+        if (event.shiftKey && current === first) {
+            event.preventDefault();
+            last?.focus();
+            return;
+        }
+
+        if (current === last) {
+            if (event.key === 'Tab' && event.shiftKey) {
+                return;
+            }
+            event.preventDefault();
+            first.focus();
+        }
+    }
+}
+document.addEventListener('keydown', (event) => {
+    // Close navmenu on Escape
+    if (event.key === 'Escape' && dealsModal.style.display === 'block') {
+        document.body.style.overflow = '';
+        dealsModal.style.display = 'none';
+        return;
+    }
+    if (event.key === 'Tab' && dealsModal.style.display === 'block') {
+        trapControl(
+            event,
+            specialDealsSection,
+            specialDealsCloseBtn,
+            viewUnlockDealsBtn,
+        );
+        trapControl(
+            event,
+            unlockedDealsSection,
+            unlockedDealsCloseBtn,
+            backToSpecialDealsBtn,
+        );
+    }
+});

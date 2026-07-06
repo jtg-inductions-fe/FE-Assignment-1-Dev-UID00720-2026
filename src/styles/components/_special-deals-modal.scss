@@ -48,6 +48,10 @@
         right: 15px;
         cursor: pointer;
     }
+    &__close-btn:hover {
+        transform: none;
+        box-shadow: none;
+    }
 }
 .unlocked-deals {
     display: none;
@@ -167,7 +171,8 @@
     }
 }
 .deal-won {
-    display: none;
+    // display: none;
+    visibility: hidden;
     text-align: center;
     margin-top: 20px;
     &__h6 {
@@ -189,6 +194,7 @@
     border: 1px solid #f4436c33;
     border-radius: 16px;
     background: $red-blue-gradient;
+    padding: 16px;
 
     &__coupon-detail {
         width: 50%;
@@ -200,13 +206,13 @@
             font-weight: 600;
             line-height: 100%;
             letter-spacing: 0%;
+            text-align: left;
         }
         &__expired-in {
             font-size: rem(12);
             font-weight: 400;
             line-height: 100%;
             letter-spacing: 0%;
-            padding-left: 20px;
             text-align: left;
             color: $color-dark-blue;
         }
@@ -215,6 +221,7 @@
         width: 50%;
         display: flex;
         gap: 5px;
+        justify-content: right;
         &__coupon-code {
             border: 1px solid #e5e7eb;
             border-radius: 8px;
@@ -229,6 +236,10 @@
             img {
                 pointer-events: none;
             }
+        }
+        button:hover {
+            box-shadow: none;
+            transform: none;
         }
     }
 }
