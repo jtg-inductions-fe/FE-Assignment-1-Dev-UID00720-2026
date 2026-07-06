@@ -1,16 +1,16 @@
 .testimonial-section {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 110px;
     &__h5 {
-        padding-top: 5px;
+        padding-top: 0px;
     }
     &__h2 {
-        padding: 15px;
+        padding: 20px;
     }
     .splide {
         max-width: 500px;
         height: 550px;
-        margin: 2rem auto;
+        margin: 1rem auto;
         &__arrows {
             position: absolute;
             top: 10%;
@@ -27,6 +27,15 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                svg {
+                    font-size: 12px;
+                }
+            }
+            button:hover {
+                background-color: $primary-color;
+                svg {
+                    color: white;
+                }
             }
         }
         &__pagination {
@@ -85,7 +94,7 @@
                 font-size: 24px;
                 color: #191825bf;
                 span {
-                    color: #ff5722;
+                    color: $orange-color;
                 }
             }
             &__rating {
@@ -93,7 +102,7 @@
                 flex-direction: row;
                 width: 56%;
                 margin: auto;
-                margin-top: 30px;
+                margin-top: 40px;
                 margin-bottom: 62px;
                 gap: 16px;
                 img {
@@ -112,18 +121,18 @@
 
 @include for-device-width('md') {
     .testimonial-section {
-        background-image: url('/assets/testimonialBackground.png');
+        background-image: url('/assets/testimonial-background.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center 55%;
         margin: -$md-padding;
-        margin-top: 20px;
+        margin-top: 10px;
         padding: 0px;
         &__h5 {
             padding: 0px;
         }
         &__h2 {
-            padding: 10px;
+            padding: 15px;
         }
 
         .splide {
@@ -142,8 +151,8 @@
                     padding: 0px;
                     width: 100px;
                     height: 100px;
-                    img {
-                        width: 20px;
+                    svg {
+                        font-size: 16px;
                     }
                 }
             }
@@ -194,7 +203,6 @@
 
 @include for-device-width('lg') {
     .testimonial-section {
-        background-image: url('/assets/testimonialBackground.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center 32%;
@@ -219,8 +227,8 @@
                     padding: 0px;
                     width: 125px;
                     height: 125px;
-                    img {
-                        width: 28px;
+                    svg {
+                        font-size: 22px;
                     }
                 }
             }

@@ -9,17 +9,27 @@
             href="https://cdn.jsdelivr.net/npm/@vetixy/circular-std@1.0.0/dist/index.min.css"
             rel="stylesheet"
         />
+        <link rel="icon" href="/assets/favicon.ico" type="image" />
+        <script
+            src="https://kit.fontawesome.com/de773bc714.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
         <div class="container">
             <header>
                 <div class="header-section">
-                    <div class="header-section__icon">
-                        <img src="/assets/appLogo.svg" alt="Travlog-logo" />
-                    </div>
+                    <a href="#" class="header-section__icon">
+                        <img src="/assets/app-logo.svg" alt="Travlog-logo" />
+                    </a>
 
                     <div class="header-section__icon" id="hamburger">
-                        <button type="button">
+                        <button
+                            type="button"
+                            aria-label="Open navigation menu"
+                            aria-controls="nav-menu"
+                            aria-expanded="false"
+                        >
                             <img
                                 src="/assets/hamburger.svg"
                                 alt="hamburger-icon"
@@ -27,12 +37,13 @@
                         </button>
                     </div>
 
-                    <nav class="nav-menu">
+                    <nav class="nav-menu" id="nav-menu">
                         <ul>
                             <li>
                                 <button
                                     class="nav-menu__menu-btn--hide"
                                     type="button"
+                                    aria-label="Close navigation menu"
                                 >
                                     X
                                 </button>
@@ -74,7 +85,7 @@
             </header>
             <div class="blur-orange-bg"></div>
             <main>
-                <section class="hero-section">
+                <section class="hero-section" aria-labelledby="hero-heading">
                     <article class="hero-section__img-section">
                         <img
                             class="hero-section__img-section__location-icon"
@@ -97,13 +108,13 @@
                             >
                                 <div>
                                     <img
-                                        src="/assets/Rectangle 1.png"
+                                        src="/assets/rectangle-1.png"
                                         alt="Travel image at beach"
                                     />
                                 </div>
                                 <div>
                                     <img
-                                        src="/assets/Rectangle 2.png"
+                                        src="/assets/rectangle-2.png"
                                         alt="Travel image at mountains"
                                     />
                                 </div>
@@ -113,7 +124,7 @@
                             >
                                 <div>
                                     <img
-                                        src="/assets/Rectangle 3.png"
+                                        src="/assets/rectangle-3.png"
                                         alt="Travel image at city"
                                     />
                                 </div>
@@ -124,12 +135,12 @@
                     <div class="hero-section__content-section">
                         <div class="hero-section__content-section__heading1">
                             Explore the world!
-                            <img
-                                src="/assets/work 1.png"
-                                alt="travel bag icon"
-                            />
+                            <img src="/assets/work.png" alt="travel bag icon" />
                         </div>
-                        <h2 class="hero-section__content-section__heading2">
+                        <h2
+                            class="hero-section__content-section__heading2"
+                            id="hero-heading"
+                        >
                             Travel <span>top destination</span> of the world
                         </h2>
                         <p class="hero-section__content-section__para">
@@ -138,10 +149,12 @@
                         </p>
 
                         <div class="hero-section__content-section__btns">
-                            <button class="primary-btn">Get Started</button>
-                            <button class="secondary-btn">
+                            <button type="button" class="primary-btn">
+                                Get Started
+                            </button>
+                            <button type="button" class="secondary-btn">
                                 <img
-                                    src="/assets/watchDemo.png"
+                                    src="/assets/watch-demo.png"
                                     alt="watch demo logo"
                                 />
                                 Watch Demo
@@ -163,18 +176,18 @@
                             width="130px"
                         />
                         <source
-                            media="(width <= 1023px)"
+                            media="(width <= 1024px)"
                             srcset="/assets/tripadvisor.svg"
                             width="210px"
                         />
                         <source
-                            media="(width >= 1024px)"
+                            media="(width >= 1025px)"
                             srcset="/assets/tripadvisor.svg"
                             width="280px"
                         />
                         <img
                             src="/assets/tripadvisor.svg"
-                            alt="Chris standing up holding his daughter Elva"
+                            alt="tripadvisor logo"
                         />
                     </picture>
                     <picture>
@@ -184,19 +197,16 @@
                             width="70px"
                         />
                         <source
-                            media="(width <= 1023px)"
+                            media="(width <= 1024px)"
                             srcset="/assets/expedia.svg"
                             width="115px"
                         />
                         <source
-                            media="(width >= 1024px)"
+                            media="(width >= 1025px)"
                             srcset="/assets/expedia.svg"
                             width="150px"
                         />
-                        <img
-                            src="/assets/expedia.svg"
-                            alt="Chris standing up holding his daughter Elva"
-                        />
+                        <img src="/assets/expedia.svg" alt="expedia logo" />
                     </picture>
                     <picture>
                         <source
@@ -205,18 +215,18 @@
                             width="120px"
                         />
                         <source
-                            media="(width <= 1023px)"
+                            media="(width <= 1024px)"
                             srcset="/assets/booking.com.svg"
                             width="190px"
                         />
                         <source
-                            media="(width >= 1024px)"
+                            media="(width >= 1025px)"
                             srcset="/assets/booking.com.svg"
                             width="250px"
                         />
                         <img
                             src="/assets/booking.com.svg"
-                            alt="Chris standing up holding his daughter Elva"
+                            alt="booking.com logo"
                         />
                     </picture>
                     <picture>
@@ -226,19 +236,16 @@
                             width="65px"
                         />
                         <source
-                            media="(width <= 1023px)"
+                            media="(width <= 1024px)"
                             srcset="/assets/airbnb.svg"
                             width="100px"
                         />
                         <source
-                            media="(width >= 1024px)"
+                            media="(width >= 1025px)"
                             srcset="/assets/airbnb.svg"
                             width="130px"
                         />
-                        <img
-                            src="/assets/airbnb.svg"
-                            alt="Chris standing up holding his daughter Elva"
-                        />
+                        <img src="/assets/airbnb.svg" alt="airbnb logo" />
                     </picture>
                     <picture>
                         <source
@@ -247,26 +254,26 @@
                             width="110px"
                         />
                         <source
-                            media="(width <= 1023px)"
+                            media="(width <= 1024px)"
                             srcset="/assets/orbitz.svg"
                             width="180px"
                         />
                         <source
-                            media="(width >= 1024px)"
+                            media="(width >= 1025px)"
                             srcset="/assets/orbitz.svg"
-                            width="240px"
+                            width="230px"
                         />
-                        <img
-                            src="/assets/orbitz.svg"
-                            alt="Chris standing up holding his daughter Elva"
-                        />
+                        <img src="/assets/orbitz.svg" alt="orbitz logo" />
                     </picture>
                 </article>
 
-                <section class="travel-section">
+                <section
+                    class="travel-section"
+                    aria-labelledby="travel-heading"
+                >
                     <div class="travel-section__img">
                         <img
-                            src="/assets/travellingImage.svg"
+                            src="/assets/travelling-image.svg"
                             alt="Travelling image"
                         />
                     </div>
@@ -274,12 +281,15 @@
                     <div class="travel-section__content">
                         <div class="blur-yellow-bg"></div>
                         <div class="star-logo">
-                            <img src="/assets/Frame 50.svg" alt="star logo" />
+                            <img src="/assets/frame-star.svg" alt="star logo" />
                         </div>
                         <h5 class="travel-section__content__h5">
                             TRAVEL POINT
                         </h5>
-                        <h2 class="travel-section__content__h2">
+                        <h2
+                            class="travel-section__content__h2"
+                            id="travel-heading"
+                        >
                             We helping you find your dream location
                         </h2>
                         <p class="travel-section__content__para">
@@ -308,25 +318,32 @@
                     </div>
                 </section>
 
-                <section class="testimonial-section">
-                    <h5 class="testimonial-section__h5">TESTIMONIALS</h5>
+                <section
+                    class="testimonial-section"
+                    aria-labelledby="testimonial-heading"
+                >
+                    <h5
+                        class="testimonial-section__h5"
+                        id="testimonial-heading"
+                    >
+                        TESTIMONIALS
+                    </h5>
                     <h2 id="carousel-heading" class="testimonial-section__h2">
                         Trust our clients
                     </h2>
                     <section class="splide" aria-labelledby="carousel-heading">
                         <div class="splide__arrows">
                             <button
+                                type="button"
                                 class="splide__arrow splide__arrow--prev secondary-btn"
                             >
-                                <img
-                                    src="/assets/left arrow.svg"
-                                    alt="left arrow"
-                                />
+                                <i class="fa-solid fa-arrow-left"></i>
                             </button>
                             <button
-                                class="splide__arrow splide__arrow--next primary-btn"
+                                type="button"
+                                class="splide__arrow splide__arrow--next secondary-btn"
                             >
-                                <img src="/assets/right arrow.svg" alt="" />
+                                <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
                         <ul class="splide__pagination"></ul>
@@ -448,6 +465,129 @@
                     </section>
                 </section>
             </main>
+            <footer class="footer">
+                <div class="footer__desc">
+                    <div class="footer__desc__logo">
+                        <img src="/assets/app-logo.svg" alt="Travlog logo" />
+                        Travlog
+                    </div>
+                    <p class="footer__desc__p">
+                        Contrary to popular belief, Lorem Ipsum is not simply
+                        random text. It has roots in a piece of classical Latin
+                        literature from 45 BC.
+                    </p>
+                    <div class="footer__desc__socials">
+                        <a href="#"
+                            ><img
+                                src="/assets/facebook.svg"
+                                alt="facebook logo"
+                        /></a>
+                        <a href="#"
+                            ><img src="/assets/twitter.svg" alt="twitter logo"
+                        /></a>
+                        <a href="#"
+                            ><img
+                                src="/assets/instagram.svg"
+                                alt="instagram logo"
+                        /></a>
+                    </div>
+                </div>
+                <div class="footer__navs">
+                    <div class="footer-links-section">
+                        <div class="footer-links-section__heading">
+                            <div class="links-heading">Company</div>
+                            <button
+                                class="links-arrow"
+                                type="button"
+                                aria-label="open company links"
+                            >
+                                <img
+                                    class="company-down-arrow"
+                                    src="/assets/arrow-circle-down.svg"
+                                    alt="down arrow"
+                                />
+                            </button>
+                        </div>
+                        <div
+                            class="footer-links-section__nav-links company-nav-links"
+                        >
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Career</a></li>
+                                <li><a href="#">Mobile</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-links-section">
+                        <div class="footer-links-section__heading">
+                            <div class="links-heading">Contact Us</div>
+                            <button
+                                class="links-arrow"
+                                type="button"
+                                aria-label="open contact links"
+                            >
+                                <img
+                                    class="contact-down-arrow"
+                                    src="/assets/arrow-circle-down.svg"
+                                    alt="down arrow"
+                                />
+                            </button>
+                        </div>
+                        <div
+                            class="footer-links-section__nav-links contact-nav-links"
+                        >
+                            <ul>
+                                <li><a href="#">Why Travlog?</a></li>
+                                <li><a href="#">Partner with us</a></li>
+                                <li><a href="#">FAQ's</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-links-section">
+                        <div class="footer-links-section__heading">
+                            <div class="links-heading">Meet Us</div>
+                            <button
+                                class="links-arrow"
+                                type="button"
+                                aria-label="open meet up links"
+                            >
+                                <img
+                                    class="meet-down-arrow"
+                                    src="/assets/arrow-circle-down.svg"
+                                    alt="down arrow"
+                                />
+                            </button>
+                        </div>
+                        <div
+                            class="footer-links-section__nav-links meet-nav-links"
+                        >
+                            <ul>
+                                <li>
+                                    <a href="tel:+0092123456789"
+                                        >+00 92 1234 56789</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="mailto:info@travlog.com"
+                                        >info@travlog.com</a
+                                    >
+                                </li>
+                                <li>
+                                    <address>
+                                        205. R Street, New York BD23200
+                                    </address>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <img
+                    class="footer-decorator-img"
+                    src="/assets/footer-decorator-img.png"
+                    alt="footer decorator img"
+                />
+            </footer>
         </div>
         <script type="module" src="./src/script/splide.js"></script>
         <script type="module" src="./src/script/index.js"></script>

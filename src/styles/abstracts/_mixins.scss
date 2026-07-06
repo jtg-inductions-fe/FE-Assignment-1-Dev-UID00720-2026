@@ -1,6 +1,12 @@
 // --- Mixins ---
 @mixin for-device-width($width) {
-    @media screen and (min-width: map-get($breakpoints, $width)) {
+    $value: map-get($breakpoints, $width);
+    // Check if the key exists in the map
+    @if $value == null {
+        @error "Invalid breakpoint '#{$width}'. Expected one of: #{map-keys($breakpoints)}.";
+    }
+
+    @media screen and (min-width: $value) {
         @content;
     }
 }

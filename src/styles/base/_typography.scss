@@ -1,7 +1,7 @@
 body {
     font-family: 'Circular Std', sans-serif;
     h5 {
-        font-size: 15px;
+        font-size: rem(15);
         font-weight: 700;
         line-height: 120%;
         letter-spacing: 20%;
@@ -9,37 +9,57 @@ body {
     }
     h2 {
         font-weight: 700;
-        font-size: 30px;
+        font-size: rem(30);
         line-height: 120%;
         letter-spacing: 0%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        line-clamp: 3;
+    }
+    h2:hover {
+        display: block;
     }
     p {
         line-height: 160%;
         letter-spacing: 0%;
-        color: $p-color;
+        color: $para-color;
         font-weight: 400;
-        font-size: 15px;
+        font-size: rem(15);
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        line-clamp: 3;
+    }
+    p:hover {
+        display: block;
+    }
+    button:hover {
+        transform: translateY(-10%);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
     @include for-device-width('md') {
         h5 {
-            font-size: 23px;
+            font-size: rem(23);
         }
         h2 {
-            font-size: 38px;
+            font-size: rem(38);
         }
         p {
-            font-size: 19px;
+            font-size: rem(18);
         }
     }
     @include for-device-width('lg') {
         h5 {
-            font-size: 29px;
+            font-size: rem(29);
         }
         h2 {
-            font-size: 55px;
+            font-size: rem(55);
         }
         p {
-            font-size: 24px;
+            font-size: rem(25);
             font-weight: 400;
         }
     }

@@ -77,20 +77,19 @@
         }
         &__heading2 {
             font-size: 40px;
-            padding: 18px 0px;
+            margin: 18px 0;
             font-weight: 700;
             span {
                 color: $secondary-color;
             }
         }
         &__para {
-            padding: 8px 4px;
-            line-height: 25px;
+            padding: 5px 4px;
         }
         &__btns {
             .primary-btn {
                 box-shadow: 0px 20px 15px #00000026;
-                margin: 20px 0px;
+                margin: 25px 0px;
                 height: 65px;
                 width: 100%;
                 font-size: 14px;
@@ -119,7 +118,7 @@
 
 //mobile
 .websites-logo {
-    padding-top: 20px;
+    padding-top: 10px;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -132,7 +131,7 @@
 @include for-device-width('md') {
     .hero-section {
         position: relative;
-        padding-top: 50px;
+        padding-top: 60px;
         &__img-section {
             margin: auto;
             width: 85%;
@@ -182,13 +181,13 @@
             margin: auto;
             text-align: center;
             &__heading2 {
-                margin-top: 25px;
+                margin-top: 45px;
                 font-size: 55px;
                 line-height: 130%;
             }
             &__para {
                 max-width: 450px;
-                padding-top: 25px;
+                padding-top: 15px;
                 margin: auto;
             }
             &__btns {
@@ -198,7 +197,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top: 5px;
+                margin-top: 10px;
                 gap: 10px;
                 button {
                     font-size: 14px;
@@ -218,8 +217,8 @@
         .triangles-image {
             display: block;
             position: absolute;
-            left: -15px;
-            top: 1135px;
+            left: -25px;
+            top: 1125px;
         }
     }
     .websites-logo {
@@ -239,14 +238,13 @@
     .hero-section {
         display: flex;
         flex-direction: row-reverse;
-        padding-top: 0px;
+        padding-top: 15px;
         min-width: 865px;
         &__img-section {
             margin: auto;
             margin-top: 0px;
             margin-left: 45px;
-            width: 65%;
-            min-width: 500px;
+            max-width: 1050px;
             &__location-icon {
                 position: absolute;
                 top: 49%;
@@ -256,8 +254,8 @@
             &__connect-icon {
                 position: absolute;
                 width: 17%;
-                top: 93%;
-                left: 58%;
+                top: 92%;
+                left: 56%;
             }
             &__top-places-icon {
                 position: absolute;
@@ -288,50 +286,52 @@
             }
         }
         &__content-section {
-            padding-top: 60px;
+            padding-top: rem(70);
             &__heading1 {
-                margin: 0px;
-                margin-left: 10px;
-                width: 270px;
-                font-size: 18px;
+                margin: 10px;
+                margin-left: rem(10);
+                max-width: rem(270);
+                font-size: rem(18);
                 img {
-                    width: 30px;
+                    width: rem(30);
                 }
             }
             &__heading2 {
-                margin-top: 10%;
+                margin-top: 11%;
                 text-align: left;
-                width: 500px;
+                width: rem(500);
                 font: bold;
                 line-height: 120%;
-                font-size: 5.5rem;
+                font-size: rem(88);
             }
             &__para {
-                margin-top: 3%;
+                margin-top: 40px;
+                margin-left: 0;
                 text-align: left;
-                width: 450px;
+                max-width: rem(450);
             }
             &__btns {
-                width: 450px;
+                margin-left: 0;
+                max-width: rem(450);
                 display: flex;
                 justify-content: left;
-                margin-top: 80px;
-                gap: 20px;
+                margin-top: rem(20);
+                gap: rem(20);
                 align-items: center;
                 button {
                     img {
-                        width: 25px;
+                        width: rem(25);
                     }
                 }
                 .primary-btn {
-                    width: 170px;
-                    height: 60px;
-                    font-size: 17px;
+                    width: rem(170);
+                    height: rem(60);
+                    font-size: rem(17);
                 }
                 .secondary-btn {
-                    width: 220px;
-                    font-size: 17px;
-                    height: 70px;
+                    width: rem(220);
+                    font-size: rem(17);
+                    height: rem(70);
                 }
             }
         }
@@ -339,14 +339,14 @@
             display: block;
             position: absolute;
             left: -100px;
-            top: 880px;
+            top: 860px;
             img {
                 width: 82px;
             }
         }
     }
     .websites-logo {
-        margin-top: 100px;
+        margin-top: 120px;
         display: flex;
         width: 100%;
         justify-content: space-between;

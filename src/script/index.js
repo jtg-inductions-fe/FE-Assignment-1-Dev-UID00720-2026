@@ -5,6 +5,7 @@ const hideMenuBtn = document.querySelector('.nav-menu__menu-btn--hide');
 const isMobileQuery = window.matchMedia(
     `(max-width: ${Constants.mobileWidth})`,
 );
+const linksArrows = document.querySelectorAll('.links-arrow');
 
 /**
  * Checks if the current viewport matches the mobile media query (max-width: 430px).
@@ -24,6 +25,7 @@ function getIsMobile() {
 function setMenuOpen(isOpen) {
     navMenu.classList.toggle('show', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    hamburger.setAttribute('aria-expanded', isOpen.toString());
 }
 
 hamburger.addEventListener('click', () => {
@@ -66,3 +68,22 @@ document.addEventListener('keydown', (event) => {
         }
     }
 });
+
+/**
+ * Attaches click event listeners to footer arrows to toggle the visibility of mobile nav links.
+ * When an arrow is clicked, it finds the corresponding nav links within the same section
+ * and toggles the 'show-footer-navs' class.
+ *
+ * @returns {void}
+ */
+function openFooterLinks() {
+    for (let linksArrow of linksArrows) {
+        linksArrow.addEventListener('click', () => {
+            const navLinks = linksArrow
+                .closest('.footer-links-section')
+                .querySelector('.footer-links-section__nav-links');
+            navLinks.classList.toggle('show-footer-navs');
+        });
+    }
+}
+openFooterLinks();
