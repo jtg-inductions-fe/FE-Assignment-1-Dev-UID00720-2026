@@ -241,6 +241,9 @@
     .deal-details__coupon-detail__expired-in {
         color: $color-grey-bg;
     }
+    .deal-details__code-section__copy-btn {
+        pointer-events: none;
+    }
 }
 
 .deals-navigation-btn {
