@@ -1,0 +1,359 @@
+.deals-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $modals-bg-color;
+    display: none;
+    z-index: 4;
+}
+.deals {
+    position: fixed;
+    bottom: 0;
+    width: 360px;
+    min-height: 400px;
+    left: 50%;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    transform: translateX(-50%);
+    background-color: $color-white;
+    &__tittle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        color: $color-pink-red;
+        font-size: rem(12);
+        font-weight: 600;
+        letter-spacing: 10%;
+        margin-top: 25px;
+    }
+    &__subtittle {
+        text-align: center;
+        font-size: rem(20);
+        margin-top: 8px;
+    }
+    &__para {
+        text-align: center;
+        margin: 10px 0;
+    }
+    &__close-btn {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+    &__close-btn:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+.unlocked-deals {
+    display: none;
+    &__display-section {
+        text-align: center;
+        min-width: 312px;
+        height: 260px;
+        margin: auto;
+        overflow-y: auto;
+        .deal-details {
+            margin: auto;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+    }
+}
+.wheel-section {
+    .wheel {
+        margin-top: 30px;
+        position: relative;
+        &__triangle {
+            position: absolute;
+            left: 50%;
+            top: -10px;
+            z-index: 10;
+            transform: translateX(-50%);
+            height: 13px;
+            width: 16px;
+            clip-path: polygon(100% 0, 50% 100%, 0 0);
+            background-color: $color-grey;
+        }
+        &__circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: rem(12);
+            width: 227px;
+            height: 227px;
+            background-color: $color-light-grey;
+            border-radius: 50%;
+            box-shadow: 0 0 50px 7px $shadow-color;
+            border: 2px solid $color-white;
+            margin: auto;
+        }
+    }
+    .spin-wheel {
+        display: none;
+        &__triangle {
+            background-color: $color-pink-red;
+        }
+        &__circle {
+            position: relative;
+            transition: transform 5s ease-out;
+            flex-wrap: wrap;
+            &__spin-btn {
+                width: 43px;
+                height: 43px;
+                border-radius: 50%;
+                border: 3px solid $color-pink-red;
+                color: $color-pink-red;
+                font-size: rem(10);
+                cursor: pointer;
+                font-weight: 700;
+                letter-spacing: 4%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $color-white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &__inner {
+                height: 50%;
+                width: 50%;
+                border: 2px solid $color-white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p {
+                    color: $color-white;
+                    font-weight: 700;
+                    font-size: rem(12);
+                    line-height: 100%;
+                    text-align: center;
+                }
+            }
+            .prize1 {
+                border-top-left-radius: 100%;
+                background-color: $color-pink-red;
+                p {
+                    transform: rotate(-45deg);
+                }
+            }
+            .prize2 {
+                border-bottom-left-radius: 100%;
+                background-color: $color-light-blue;
+                p {
+                    transform: rotate(225deg);
+                }
+            }
+            .prize3 {
+                border-bottom-right-radius: 100%;
+                background-color: $color-yellow;
+                p {
+                    color: $color-black;
+                    transform: rotate(-225deg);
+                }
+            }
+            .prize4 {
+                border-top-right-radius: 100%;
+                background-color: $color-dark-blue;
+                p {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
+.deal-won {
+    // display: none;
+    visibility: hidden;
+    text-align: center;
+    margin-top: 20px;
+    &__h6 {
+        margin-bottom: 10px;
+    }
+}
+
+// component for showing a deal details that user have won
+.deal-details {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    min-height: 67px;
+    margin: auto;
+    border: 1px solid $color-light-pink;
+    border-radius: 16px;
+    background: $red-blue-gradient;
+    padding: 16px;
+
+    &__coupon-detail {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        &__name {
+            font-size: rem(14);
+            font-weight: 600;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+        &__expired-in {
+            font-size: rem(12);
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: left;
+            color: $color-dark-blue;
+        }
+    }
+    &__code-section {
+        width: 50%;
+        display: flex;
+        gap: 10px;
+        justify-content: right;
+        &__coupon-code {
+            border: 1px solid $color-light-grey-border;
+            border-radius: 8px;
+            padding: 4px 10px;
+            font-weight: 700;
+            font-size: rem(12);
+            line-height: 100%;
+            letter-spacing: 5%;
+        }
+        &__copy-btn {
+            cursor: pointer;
+            img {
+                pointer-events: none;
+            }
+        }
+        button:hover {
+            box-shadow: none;
+            transform: none;
+        }
+    }
+}
+.deal-expired {
+    background: none;
+    background-color: $color-light-grey;
+    .deal-details__coupon-detail__expired-in {
+        color: $color-grey-bg;
+    }
+    .deal-details__code-section__copy-btn {
+        pointer-events: none;
+    }
+}
+
+.deals-navigation-btn {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 312px;
+    min-height: 49px;
+    border: 1px solid $color-light-grey;
+    border-radius: 100px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 32px;
+    &__text {
+        font-size: rem(14);
+        font-weight: 600;
+        line-height: 120%;
+        letter-spacing: 0%;
+    }
+    &__count {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+        background-color: $primary-color;
+        color: $color-white;
+        border-radius: 10px;
+        font-size: rem(12);
+        font-weight: 500;
+        letter-spacing: 0%;
+    }
+}
+
+.view-unlock-deals {
+    display: none;
+}
+
+@include for-device-width('md') {
+    .deals {
+        width: 400px;
+        min-height: 400px;
+        bottom: 24%;
+        border-radius: 24px;
+        &__tittle {
+            gap: 4px;
+            font-size: rem(15);
+            margin-top: 30px;
+            img {
+                width: 20px;
+            }
+        }
+        &__subtittle {
+            font-size: rem(25);
+            margin-top: 8px;
+        }
+        &__para {
+            margin: 10px 0;
+        }
+        &__close-btn {
+            img {
+                width: 28px;
+            }
+        }
+    }
+    .wheel-section {
+        .wheel {
+            margin-top: 30px;
+            &__triangle {
+                top: -15px;
+                height: 15px;
+                width: 20px;
+            }
+            &__circle {
+                width: 280px;
+                height: 280px;
+                margin: auto;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+        }
+        .spin-wheel {
+            &__circle {
+                &__spin-btn {
+                    height: 55px;
+                    width: 55px;
+                    font-size: rem(12);
+                }
+            }
+        }
+    }
+
+    .deals-navigation-btn {
+        gap: 8px;
+        width: 85%;
+        min-height: 60px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px 32px;
+        &__text {
+            font-size: rem(17);
+        }
+        &__count {
+            width: 22px;
+            height: 22px;
+            border-radius: 10px;
+            font-size: rem(14);
+        }
+    }
+}

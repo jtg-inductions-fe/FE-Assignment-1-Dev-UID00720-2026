@@ -1,3 +1,4 @@
+import { setMenuOpen } from './utils';
 import * as Constants from './constants';
 const hamburger = document.querySelector('#hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -22,11 +23,6 @@ function getIsMobile() {
  *
  * @param {boolean} isOpen - True to open the menu, false to close it.
  */
-function setMenuOpen(isOpen) {
-    navMenu.classList.toggle('show', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-    hamburger.setAttribute('aria-expanded', isOpen.toString());
-}
 
 hamburger.addEventListener('click', () => {
     setMenuOpen(!navMenu.classList.contains('show'));

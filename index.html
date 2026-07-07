@@ -16,6 +16,113 @@
         ></script>
     </head>
     <body>
+        <div class="deals-modal">
+            <div class="deals special-deals">
+                <button
+                    class="deals__close-btn special-deals-close-btn"
+                    type="button"
+                >
+                    <img src="/assets/x.svg" alt="close modal button" />
+                </button>
+                <h6 class="deals__tittle">
+                    <img src="/assets/gift.svg" alt="gift logo" />
+                    SPECIAL DEALS
+                </h6>
+                <h4 class="deals__subtittle">Spin & Win!</h4>
+                <p class="deals__para">Tap the center of the wheel to spin</p>
+                <div class="wheel-section">
+                    <div class="wheel loading-wheel">
+                        <div class="wheel__triangle"></div>
+                        <div class="wheel__circle">Loading...</div>
+                    </div>
+                    <div class="wheel spin-wheel">
+                        <div class="wheel__triangle spin-wheel__triangle"></div>
+                        <div class="wheel__circle spin-wheel__circle">
+                            <button
+                                class="spin-wheel__circle__spin-btn"
+                                type="button"
+                            >
+                                Spin
+                            </button>
+                            <div class="spin-wheel__circle__inner prize1">
+                                <p>prize one</p>
+                            </div>
+                            <div class="spin-wheel__circle__inner prize4">
+                                <p>prize four</p>
+                            </div>
+                            <div class="spin-wheel__circle__inner prize2">
+                                <p>prize two</p>
+                            </div>
+                            <div class="spin-wheel__circle__inner prize3">
+                                <p>prize three</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-won">
+                        <h6 class="deal-won__h6">You won!</h6>
+
+                        <!-- component for showing a deal details that user have won -->
+                        <div class="deal-details">
+                            <div class="deal-details__coupon-detail">
+                                <div class="deal-details__coupon-detail__name">
+                                    Spin wheel to win
+                                </div>
+                                <div
+                                    class="deal-details__coupon-detail__expired-in"
+                                >
+                                    Expires in 7d
+                                </div>
+                            </div>
+                            <div class="deal-details__code-section">
+                                <div
+                                    class="deal-details__code-section__coupon-code"
+                                >
+                                    Travlog-coupon
+                                </div>
+                                <button
+                                    class="deal-details__code-section__copy-btn"
+                                    type="button"
+                                    aria-label="Copy coupon code"
+                                >
+                                    <img src="/assets/copy.svg" alt="" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="deals-navigation-btn view-unlock-deals"
+                    >
+                        <div class="deals-navigation-btn__text">
+                            View All Unlocked Deals
+                        </div>
+                        <div class="deals-navigation-btn__count">0</div>
+                    </button>
+                </div>
+            </div>
+            <div class="deals unlocked-deals">
+                <button
+                    class="deals__close-btn unlocked-deals-close-btn"
+                    type="button"
+                >
+                    <img src="/assets/x.svg" alt="close modal button" />
+                </button>
+                <h6 class="deals__tittle">
+                    <img src="/assets/gift.svg" alt="gift logo" />
+                    SPECIAL DEALS
+                </h6>
+                <h4 class="deals__subtittle">Unlocked Deals</h4>
+                <p class="deals__para">All the deals you've unlocked yet!</p>
+                <div class="unlocked-deals__display-section"></div>
+                <button
+                    type="button"
+                    class="deals-navigation-btn back-to-special-deals-btn"
+                >
+                    <div class="deals-navigation-btn__text">Go Back</div>
+                </button>
+            </div>
+        </div>
         <div class="container">
             <header>
                 <div class="header-section">
@@ -54,7 +161,7 @@
                             <li class="nav-menu__nav-links">
                                 <a href="#discover">Discover</a>
                             </li>
-                            <li class="nav-menu__nav-links">
+                            <li class="nav-menu__nav-links special-deals-btn">
                                 <a href="#special-deals">Special Deals</a>
                             </li>
                             <li class="nav-menu__nav-links">
@@ -591,5 +698,6 @@
         </div>
         <script type="module" src="./src/script/splide.js"></script>
         <script type="module" src="./src/script/index.js"></script>
+        <script type="module" src="./src/script/specialDeals.js"></script>
     </body>
 </html>
